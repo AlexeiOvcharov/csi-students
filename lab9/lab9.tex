@@ -1,0 +1,332 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+
+\usepackage{graphicx}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{array}
+\usepackage{tabu}
+
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\usetikzlibrary{pgfplots.polar}
+
+\usepackage{pgfplotstable}
+% recommended:
+\usepackage{booktabs}
+\usepackage{colortbl}
+
+\usepackage{amsmath}
+\usepackage{float}
+
+\begin{document}
+
+\paragraph{Цель работы.} Изучение частотных характеристик типовых динамических звеньев и способов их построения.
+    
+\section*{Исходные данные.}
+
+\begin{center}
+    \tabulinesep = 2mm
+    \begin{tabu} spread 1em{|[1pt]l|c|[1pt]}
+        \tabucline[1pt]{-}
+        Тип звена & Передаточная функция \\ \hline
+        Интегрирующее с замедлением & $\displaystyle\frac{K}{s(Ts + 1)}$ \\ \hline
+        Изодромное & $\displaystyle\frac{K(Ts + 1)}{s}$ \\ \hline
+        Консервативное & $\displaystyle\frac{K}{T^2s^2 + 1}$ \\
+        \tabucline[1pt]{-}
+    \end{tabu}
+    \hspace{2cm}
+    \begin{tabu}{|[1pt]c|c|c|[1pt]}
+        \tabucline[1pt]{-}
+        K & T & $\xi$ \\ \hline
+        10 & 2 & 0.25 \\
+        \tabucline[1pt]{-}
+    \end{tabu}
+\end{center}
+
+\section*{Исследование интегрирующего звена с замедлением.}
+Экспериментально построенные характеристики данного звена представлены ниже.
+\begin{figure}[h!]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$L_m$, дБ},
+                ]
+                \addplot table [x={w}, y={logA}] {data/data4.dat};
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График ЛАЧХ.}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={w}, y={psi}] {data/data4.dat};
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График ЛФЧХ.}
+    \end{subfigure}
+    
+    \vspace{0.5cm}
+
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$A(\omega)$},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={A}] {data/data4.dat};
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График АФЧХ.}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$L_m$, дБ},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={logA}] {data/data4.dat};
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График ЛАФЧХ.}
+    \end{subfigure}
+    \caption{Частотные характеристики интегрирующего звена с запаздыванием.}
+\end{figure}
+\newpage
+
+\begin{minipage}[t]{0.6\textwidth}
+    \vspace{-0.7cm}
+    \begin{table}[H]
+        \centering
+        \caption{Таблица данных.}
+        \pgfplotstabletypeset[
+            columns/w/.style = {column name = {\boldmath$\omega$}},
+            columns/logW/.style = {column name = {\boldmath$\lg{\omega}$}},
+            columns/A/.style = {column name = {\boldmath$A(\omega)$}},
+            columns/logA/.style = {column name = {\boldmath$20\lg{A(\omega)}$}},
+            columns/psi/.style = {column name = {\boldmath$\psi$}},
+            every head row/.style = {
+            before row = \toprule, after row = \midrule
+            },
+            every last row/.style = {after row = \bottomrule},
+        ]{data/data4.dat}
+    \end{table}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+    Передаточная функия исследуемого звена представлена в исходных данных. Из нее можно построить частотную функцию и найти выражения для АЧХ и ФЧХ.
+    \begin{align}
+        W(j\omega) = \frac{-K(T\omega + j)}{\omega(T^2\omega^2 + 1)} \\
+        A(\omega) = \frac{K}{\omega\sqrt{T^2\omega^2 + 1}} \\
+        \psi(\omega) = \arctg{\frac{1}{T\omega}}
+    \end{align}
+\end{minipage}
+
+\section*{Исследование изодромного звена.}
+\begin{minipage}[t]{0.6\textwidth}
+    \vspace{-0.7cm}
+    \begin{table}[H]
+        \centering
+        \caption{Таблица данных.}
+        \pgfplotstabletypeset[
+            columns/w/.style = {column name = {\boldmath$\omega$}},
+            columns/logW/.style = {column name = {\boldmath$\lg{\omega}$}},
+            columns/A/.style = {column name = {\boldmath$A(\omega)$}},
+            columns/logA/.style = {column name = {\boldmath$20\lg{A(\omega)}$}},
+            columns/psi/.style = {column name = {\boldmath$\psi$}},
+            every head row/.style = {
+            before row = \toprule, after row = \midrule
+            },
+            every last row/.style = {after row = \bottomrule},
+        ]{data/data5.dat}
+    \end{table}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+    Передаточная функия исследуемого звена представлена в исходных данных. Из нее можно построить частотную функцию и найти выражения для АЧХ и ФЧХ.
+    \begin{align}
+        W(j\omega) = \frac{K(T\omega - j)}{\omega} \\
+        A(\omega) = \frac{K\sqrt{T^2\omega^2 + 1}}{\omega} \\
+        \psi(\omega) = -\arctg{\frac{1}{T\omega}}
+    \end{align}
+\end{minipage}
+\begin{figure}[h!]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$L_m$, дБ},
+                ]
+                \addplot table [x={w}, y={logA}] {data/data5.dat};
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График ЛАЧХ.}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={w}, y={psi}] {data/data5.dat};
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График ЛФЧХ.}
+    \end{subfigure}
+    
+    \vspace{0.5cm}
+
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$A(\omega)$},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={A}] {data/data5.dat};
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График АФЧХ.}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$L_m$, дБ},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={logA}] {data/data5.dat};
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График ЛАФЧХ.}
+    \end{subfigure}
+    \caption{Частотные характеристики изодромного звена.}
+\end{figure}
+
+\section*{Исследование консервативного звена.}
+
+\begin{minipage}[t]{0.6\textwidth}
+    \vspace{-0.7cm}
+    \begin{table}[H]
+        \centering
+        \caption{Таблица данных.}
+        \pgfplotstabletypeset[
+            columns/w/.style = {column name = {\boldmath$\omega$}},
+            columns/logW/.style = {column name = {\boldmath$\lg{\omega}$}},
+            columns/A/.style = {column name = {\boldmath$A(\omega)$}},
+            columns/logA/.style = {column name = {\boldmath$20\lg{A(\omega)}$}},
+            columns/psi/.style = {column name = {\boldmath$\psi$}},
+            every head row/.style = {
+            before row = \toprule, after row = \midrule
+            },
+            every last row/.style = {after row = \bottomrule},
+        ]{data/data7.dat}
+    \end{table}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+Ниже в таблице 3 представлены данные о частоте, фазе и амплитуде после графического сравнения графика входного воздействия и выходного. Из-за сильного искажения выходного сигнала (консерванивное звено обладает собственными колебаниями, амплитуда которых увеличивется с увеличением частоты) данные полностью снять не представлялось возможным. \par
+Ниже представлены выражения частотных характеристик.
+    \begin{align}
+        W(j\omega) = \frac{K}{1 - T^2\omega^2} \\
+        A(\omega) = \frac{K}{|1 - T^2\omega^2|}
+    \end{align}
+\end{minipage}
+\newpage
+\begin{equation}
+    \psi(\omega) = \begin{cases}
+        0, & \omega < \frac{1}{T} \\
+        -180, & \omega > \frac{1}{T}
+    \end{cases}
+\end{equation}
+
+Ниже на рисунке 3 представлены графики по данным, которые были сняты графически и полученные аналитически из выражения (8). Как видно из графиков, чем меньше частота колебаний - тем меньше амплитуда собственных колебаний системы.
+\begin{figure}[h!]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$L_m$, дБ},
+                ]
+                \addplot table [x={w}, y={logA}] {data/data7.dat};
+                \addplot[red, thick, mark = none, style = dashed] table [x={w}, y={logA}] {data/data7-full.dat};
+                \legend{\text{\scriptsize Эксперимент}, \text{\scriptsize Теория}}
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График ЛАЧХ.}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{semilogxaxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$\omega$, 1/c},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={w}, y={psi}] {data/data7.dat};
+                \addplot[red, thick, mark = none, style = dashed] table [x={w}, y={psi}] {data/data7-full.dat};
+                \legend{\text{\scriptsize Эксперимент}, \text{\scriptsize Теория}}
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{График ЛФЧХ.}
+    \end{subfigure}
+    
+    \vspace{0.5cm}
+
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$A(\omega)$},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={A}] {data/data7.dat};
+                \addplot[red, thick, mark = none, style = dashed] table [x={psi}, y={A}] {data/data7-full.dat};
+                \legend{\text{\scriptsize Эксперимент}, \text{\scriptsize Теория}}
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График АФЧХ.}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \begin{polaraxis} [
+                    width = 0.9\textwidth,
+                    xlabel = {$L_m$, дБ},
+                    ylabel = {$\psi$, градусы},
+                ]
+                \addplot table [x={psi}, y={logA}] {data/data7.dat};
+                \addplot[red, thick, mark = none, style = dashed] table [x={psi}, y={logA}] {data/data7-full.dat};
+                \legend{\text{\scriptsize Эксперимент}, \text{\scriptsize Теория}}
+            \end{polaraxis}
+        \end{tikzpicture}
+        \caption{График ЛАФЧХ.}
+    \end{subfigure}
+    \caption{Частотные характеристики консервативного звена.}
+\end{figure}
+
+\section*{Выводы}
+В данной работе мы исследовали частотные характеристике трех звеньев: интегрирующего с запаздыванием, изодромного, консервативного. Получили экспериментально графики частотных характеристик и сравнили их с соответствующими выражениями. При отрицательных вещественных корнях характеристического уравнения, выходной гармонических сигнал будет колебаться с той же частотай, что и входной, но с измененной амплитудой и фазой. При чисто мнимых корнях проявляются собственные колебания системы, что приводит к генерации двух гармоник разной частоты (частоты входного сигнала и $1/T$). Соответственно выходной сигнал будет сильно изменен.
+
+\end{document}
