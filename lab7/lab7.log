@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  4 APR 2017 23:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  7 APR 2017 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -721,23 +721,43 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@delta=\dimen136
 \TX@cols=\count108
 \TX@ftn=\toks26
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen137
+\lightrulewidth=\dimen138
+\cmidrulewidth=\dimen139
+\belowrulesep=\dimen140
+\belowbottomsep=\dimen141
+\aboverulesep=\dimen142
+\abovetopsep=\dimen143
+\cmidrulesep=\dimen144
+\cmidrulekern=\dimen145
+\defaultaddspace=\dimen146
+\@cmidla=\count109
+\@cmidlb=\count110
+\@aboverulesep=\dimen147
+\@belowrulesep=\dimen148
+\@thisruleclass=\count111
+\@lastruleclass=\count112
+\@thisrulewidth=\dimen149
 ) (./lab7.aux)
 \openout1 = `lab7.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -775,16 +795,16 @@ LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
-\scratchdimen=\dimen137
+\scratchcounter=\count113
+\scratchdimen=\dimen150
 \scratchbox=\box30
-\nofMPsegments=\count110
-\nofMParguments=\count111
+\nofMPsegments=\count114
+\nofMParguments=\count115
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count112
-\MPscratchDim=\dimen138
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen151
+\MPnumerator=\count117
+\makeMPintoPDFobject=\count118
 \everyMPtoPDFconversion=\toks28
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -837,13 +857,13 @@ Package caption Info: End \AtBeginDocument code.
 <images/model1.pdf, id=1, 461.725pt x 170.6375pt>
 File: images/model1.pdf Graphic file (type pdf)
  <use images/model1.pdf>
-Package pdftex.def Info: images/model1.pdf used on input line 33.
+Package pdftex.def Info: images/model1.pdf used on input line 36.
 (pdftex.def)             Requested size: 241.84843pt x 89.37772pt.
 
 <images/graph1-1.pdf, id=2, 782.925pt x 354.32375pt>
 File: images/graph1-1.pdf Graphic file (type pdf)
  <use images/graph1-1.pdf>
-Package pdftex.def Info: images/graph1-1.pdf used on input line 38.
+Package pdftex.def Info: images/graph1-1.pdf used on input line 41.
 (pdftex.def)             Requested size: 483.69687pt x 218.9053pt.
 
 [1
@@ -853,23 +873,23 @@ ages/graph1-1.pdf>] <images/model1-2.pdf, id=39, 521.95pt x 170.6375pt>
 File: images/model1-2.pdf Graphic file (type pdf)
 
 <use images/model1-2.pdf>
-Package pdftex.def Info: images/model1-2.pdf used on input line 60.
+Package pdftex.def Info: images/model1-2.pdf used on input line 63.
 (pdftex.def)             Requested size: 241.84843pt x 79.067pt.
 
 <images/graph1-2.pdf, id=40, 782.925pt x 354.32375pt>
 File: images/graph1-2.pdf Graphic file (type pdf)
 
 <use images/graph1-2.pdf>
-Package pdftex.def Info: images/graph1-2.pdf used on input line 65.
+Package pdftex.def Info: images/graph1-2.pdf used on input line 68.
 (pdftex.def)             Requested size: 386.95897pt x 175.12317pt.
  <images/model2-1.pdf, id=41, 461.725pt x 170.6375pt>
 File: images/model2-1.pdf Graphic file (type pdf)
 
 <use images/model2-1.pdf>
-Package pdftex.def Info: images/model2-1.pdf used on input line 75.
+Package pdftex.def Info: images/model2-1.pdf used on input line 78.
 (pdftex.def)             Requested size: 217.66211pt x 80.43916pt.
 
-Overfull \hbox (19.42162pt too wide) in paragraph at lines 72--90
+Overfull \hbox (19.42162pt too wide) in paragraph at lines 75--93
 [][] [] 
  []
 
@@ -877,7 +897,7 @@ Overfull \hbox (19.42162pt too wide) in paragraph at lines 72--90
 File: images/graph2-1.pdf Graphic file (type pdf)
 
 <use images/graph2-1.pdf>
-Package pdftex.def Info: images/graph2-1.pdf used on input line 93.
+Package pdftex.def Info: images/graph2-1.pdf used on input line 96.
 (pdftex.def)             Requested size: 386.95897pt x 175.12317pt.
 
 
@@ -891,15 +911,15 @@ pdfs with page group included in a single page
 File: images/model2-2.pdf Graphic file (type pdf)
 
 <use images/model2-2.pdf>
-Package pdftex.def Info: images/model2-2.pdf used on input line 103.
+Package pdftex.def Info: images/model2-2.pdf used on input line 106.
 (pdftex.def)             Requested size: 217.66211pt x 82.7119pt.
 
-Underfull \hbox (badness 1028) in paragraph at lines 113--115
+Underfull \hbox (badness 1028) in paragraph at lines 116--118
 \T2A/cmr/m/n/10.95 “еперь мо-жем по-лу-чить пр-дель-ные зна-че-ни€
  []
 
 
-Overfull \hbox (19.42162pt too wide) in paragraph at lines 100--119
+Overfull \hbox (19.42162pt too wide) in paragraph at lines 103--122
 [][] [] 
  []
 
@@ -907,28 +927,28 @@ Overfull \hbox (19.42162pt too wide) in paragraph at lines 100--119
 File: images/graph2-2-K1.pdf Graphic file (type pdf)
 
 <use images/graph2-2-K1.pdf>
-Package pdftex.def Info: images/graph2-2-K1.pdf used on input line 124.
+Package pdftex.def Info: images/graph2-2-K1.pdf used on input line 127.
 (pdftex.def)             Requested size: 159.62085pt x 117.38675pt.
 
 <images/graph2-2-K5.pdf, id=96, 481.8pt x 354.32375pt>
 File: images/graph2-2-K5.pdf Graphic file (type pdf)
 
 <use images/graph2-2-K5.pdf>
-Package pdftex.def Info: images/graph2-2-K5.pdf used on input line 129.
+Package pdftex.def Info: images/graph2-2-K5.pdf used on input line 132.
 (pdftex.def)             Requested size: 159.62085pt x 117.38675pt.
 
 <images/graph2-2-K10.pdf, id=97, 481.8pt x 354.32375pt>
 File: images/graph2-2-K10.pdf Graphic file (type pdf)
 
 <use images/graph2-2-K10.pdf>
-Package pdftex.def Info: images/graph2-2-K10.pdf used on input line 134.
+Package pdftex.def Info: images/graph2-2-K10.pdf used on input line 137.
 (pdftex.def)             Requested size: 159.62085pt x 117.38675pt.
 
 <images/model2-3.pdf, id=98, 572.1375pt x 170.6375pt>
 File: images/model2-3.pdf Graphic file (type pdf)
 
 <use images/model2-3.pdf>
-Package pdftex.def Info: images/model2-3.pdf used on input line 145.
+Package pdftex.def Info: images/model2-3.pdf used on input line 148.
 (pdftex.def)             Requested size: 241.84843pt x 72.1307pt.
  [3 <./images/graph2-1.pdf> <./images/model2-2.pdf> <./images/graph2-2-K1.pdf> 
 <./images/graph2-2-K5.pdf> <./images/graph2-2-K10.pdf>] <images/graph2-3-K1.pdf
@@ -936,47 +956,47 @@ Package pdftex.def Info: images/model2-3.pdf used on input line 145.
 File: images/graph2-3-K1.pdf Graphic file (type pdf)
 
 <use images/graph2-3-K1.pdf>
-Package pdftex.def Info: images/graph2-3-K1.pdf used on input line 153.
+Package pdftex.def Info: images/graph2-3-K1.pdf used on input line 156.
 (pdftex.def)             Requested size: 159.62085pt x 117.38675pt.
 
 <images/graph2-3-K5.pdf, id=136, 481.8pt x 354.32375pt>
 File: images/graph2-3-K5.pdf Graphic file (type pdf)
 
 <use images/graph2-3-K5.pdf>
-Package pdftex.def Info: images/graph2-3-K5.pdf used on input line 158.
+Package pdftex.def Info: images/graph2-3-K5.pdf used on input line 161.
 (pdftex.def)             Requested size: 159.62085pt x 117.38675pt.
 
 <images/graph2-3-K10.pdf, id=137, 481.8pt x 354.32375pt>
 File: images/graph2-3-K10.pdf Graphic file (type pdf)
 
 <use images/graph2-3-K10.pdf>
-Package pdftex.def Info: images/graph2-3-K10.pdf used on input line 163.
+Package pdftex.def Info: images/graph2-3-K10.pdf used on input line 166.
 (pdftex.def)             Requested size: 159.62085pt x 117.38675pt.
  [4 <./images/model2-3.pdf> <./images/graph2-3-K1.pdf> <./images/graph2-3-K5.pd
 f> <./images/graph2-3-K10.pdf>]
 <images/model3.pdf, id=175, 481.8pt x 136.51pt>
 File: images/model3.pdf Graphic file (type pdf)
  <use images/model3.pdf>
-Package pdftex.def Info: images/model3.pdf used on input line 176.
+Package pdftex.def Info: images/model3.pdf used on input line 179.
 (pdftex.def)             Requested size: 241.84843pt x 68.52353pt.
 
 <images/graph3.pdf, id=176, 782.925pt x 354.32375pt>
 File: images/graph3.pdf Graphic file (type pdf)
  <use images/graph3.pdf>
-Package pdftex.def Info: images/graph3.pdf used on input line 181.
+Package pdftex.def Info: images/graph3.pdf used on input line 184.
 (pdftex.def)             Requested size: 314.40001pt x 142.28386pt.
 
 [5 <./images/model3.pdf> <./images/graph3.pdf>]
 <images/model4.pdf, id=266, 813.0375pt x 210.7875pt>
 File: images/model4.pdf Graphic file (type pdf)
  <use images/model4.pdf>
-Package pdftex.def Info: images/model4.pdf used on input line 204.
+Package pdftex.def Info: images/model4.pdf used on input line 207.
 (pdftex.def)             Requested size: 338.58632pt x 87.78073pt.
 
 <images/graph4.pdf, id=267, 782.925pt x 354.32375pt>
 File: images/graph4.pdf Graphic file (type pdf)
  <use images/graph4.pdf>
-Package pdftex.def Info: images/graph4.pdf used on input line 209.
+Package pdftex.def Info: images/graph4.pdf used on input line 212.
 (pdftex.def)             Requested size: 314.40001pt x 142.28386pt.
 
 [6 <./images/model4.pdf> <./images/graph4.pdf>]
@@ -984,15 +1004,15 @@ Package pdftex.def Info: images/graph4.pdf used on input line 209.
 File: images/graph4withTailor.pdf Graphic file (type pdf)
 
 <use images/graph4withTailor.pdf>
-Package pdftex.def Info: images/graph4withTailor.pdf used on input line 247.
+Package pdftex.def Info: images/graph4withTailor.pdf used on input line 250.
 (pdftex.def)             Requested size: 386.95897pt x 175.12317pt.
  [7 <./images/graph4withTailor.pdf>]
 (./lab7.aux) ) 
 Here is how much of TeX's memory you used:
- 5349 strings out of 494399
- 73689 string characters out of 6172184
- 147849 words of memory out of 5000000
- 8552 multiletter control sequences out of 15000+600000
+ 5406 strings out of 494399
+ 74447 string characters out of 6172184
+ 148614 words of memory out of 5000000
+ 8605 multiletter control sequences out of 15000+600000
  11108 words of font info for 31 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
  42i,14n,40p,698b,459s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1008,7 +1028,7 @@ c/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
 b>
-Output written on lab7.pdf (7 pages, 1172431 bytes).
+Output written on lab7.pdf (7 pages, 1172296 bytes).
 PDF statistics:
  496 PDF objects out of 1000 (max. 8388607)
  306 compressed objects within 4 object streams

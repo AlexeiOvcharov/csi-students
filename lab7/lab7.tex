@@ -10,18 +10,21 @@
 \usepackage{float}
 \usepackage{tabularx}
 
+\usepackage{amsmath,booktabs}
+\usepackage{array}
+
 \begin{document}
 
 \section*{Цель работы}
 Исследование свойст систем управления.
 \section*{Исходные данные}
 \begin{center}
-    \begin{tabular}{|c|c|c|c|c|c|c|c|}
-    \hline
-    $W(s)$ & $g = A$ & $g = Vt$ & $g = at^2/2$ & Вариант схемы & $f_1$ & $f_2$ & Сигнал задания \\  \hline
-    $\aligned \frac{1.5}{0.5s + 1} \endaligned$ & 2 & 4t & $0.2t^2$ & a) & -0.5 & 1 & $0.5t + 2\cos{(0.1t)}$  \\
-    \hline
-\end{tabular}
+    \begin{tabular}{cccccccccc}
+        \toprule
+        $W(s)$ & $g = A$ & $g = Vt$ & $g = at^2/2$ & Вариант схемы & $f_1$ & $f_2$ & Сигнал задания \\  \midrule
+        $\aligned \frac{1.5}{0.5s + 1} \endaligned$ & 2 & 4t & $0.2t^2$ & a) & -0.5 & 1 & $0.5t + 2\cos{(0.1t)}$ \rule{0pt}{5pt} \\ 
+        \bottomrule
+    \end{tabular}
 \end{center}
 
 \section*{Исследование системы с астатизмом нулевого порядка.}
