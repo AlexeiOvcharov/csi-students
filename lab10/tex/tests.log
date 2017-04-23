@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  20 APR 2017 03:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  20 APR 2017 03:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab10
-(./lab10.tex
+**tests
+(./tests.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 12 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -1171,23 +1171,23 @@ LaTeX Warning: You have requested package `../../titlepage/TAYTitle',
 
 Package: TAYTitle 2015/08/10 v.01 an example package
  for wikibooks
-) (./lab10.aux)
-\openout1 = `lab10.aux'.
+) (./tests.aux)
+\openout1 = `tests.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1286,186 +1286,36 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.13}).
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-<../images/FullModel/full-model.pdf, id=4, 1164.35pt x 230.8625pt>
-File: ../images/FullModel/full-model.pdf Graphic file (type pdf)
-
-<use ../images/FullModel/full-model.pdf>
-Package pdftex.def Info: ../images/FullModel/full-model.pdf used on input line 
-137.
-(pdftex.def)             Requested size: 483.69687pt x 95.90477pt.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-PGFPlots: reading {../data/FullModel/TransPlot.dat}
-PGFPlots: reading {../data/FullModel/TransPlot.dat}
-PGFPlots: reading {../data/FullModel/TransPlot.dat}
-PGFPlots: reading {../data/FullModel/TransPlot.dat}
-Missing character: There is no ; in font nullfont!
- [2 <../images/FullModel/full-model.pdf>]
-PGFPlots: reading {../data/FullModel/Moment-w.dat}
-PGFPlots: reading {../data/FullModel/Moment-w.dat}
-PGFPlots: reading {../data/FullModel/Moment-w.dat}
-PGFPlots: reading {../data/FullModel/Moment-w.dat}
-PGFPlots: reading {../data/FullModel/Moment-w.dat}
-Missing character: There is no ; in font nullfont!
-PGFPlots: reading {../data/FullModel/Moment-I.dat}
-PGFPlots: reading {../data/FullModel/Moment-I.dat}
-PGFPlots: reading {../data/FullModel/Moment-I.dat}
-PGFPlots: reading {../data/FullModel/Moment-I.dat}
-PGFPlots: reading {../data/FullModel/Moment-I.dat}
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 176--218
-[]$[]$ $[]$
- []
-
-PGFPlots: reading {../data/FullModel/Moment-alpha.dat}
-PGFPlots: reading {../data/FullModel/Moment-alpha.dat}
-PGFPlots: reading {../data/FullModel/Moment-alpha.dat}
-PGFPlots: reading {../data/FullModel/Moment-alpha.dat}
-PGFPlots: reading {../data/FullModel/Moment-alpha.dat}
-PGFPlots: reading {../data/FullModel/Moment-U.dat}
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 219--255
-[]$[]$ $[]$ 
- []
-
 PGFPlots: reading {../data/FullModel/Moment.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-w.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-w.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-w.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-w.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-w.dat}
-Missing character: There is no ; in font nullfont!
-PGFPlots: reading {../data/FullModel/InertiaMoment-I.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-I.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-I.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-I.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-I.dat}
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 275--317
-[]$[]$ $[]$
- []
+Package caption Warning: Unused \captionsetup[figure] on input line 35.
+See the caption package documentation for explanation.
 
-PGFPlots: reading {../data/FullModel/InertiaMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/InertiaMoment-U.dat}
+[1
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 318--354
-[]$[]$ $[]$ 
- []
-
-[3]
-PGFPlots: reading {../data/FullModel/InertiaMoment.dat}
- [4]
-PGFPlots: reading {../data/FullModel/GearRatio-w.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-w.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-w.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-w.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-w.dat}
-Missing character: There is no ; in font nullfont!
-PGFPlots: reading {../data/FullModel/GearRatio-I.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-I.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-I.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-I.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-I.dat}
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 376--416
-[]$[]$ $[]$
- []
-
-PGFPlots: reading {../data/FullModel/GearRatio-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatio-U.dat}
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 417--452
-[]$[]$ $[]$ 
- []
-
-PGFPlots: reading {../data/FullModel/GearRatio.dat}
-[5]
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-w.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-w.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-w.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-w.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-w.dat}
-Missing character: There is no ; in font nullfont!
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-I.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-I.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-I.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-I.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-I.dat}
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 472--512
-[]$[]$ $[]$
- []
-
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-alpha.dat}
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment-U.dat}
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 513--547
-[]$[]$ $[]$ 
- []
-
-PGFPlots: reading {../data/FullModel/GearRatioWithMoment.dat}
-[6]
-PGFPlots: reading {../data/FullModel/TransPlotSwitchedTime.dat}
-PGFPlots: reading {../data/FullModel/TransPlotSwitchedTime.dat}
-PGFPlots: reading {../data/FullModel/TransPlotSwitchedTime.dat}
-PGFPlots: reading {../data/FullModel/TransPlotSwitchedTime.dat}
-Missing character: There is no ; in font nullfont!
- <../images/EasyModel/easy-model.pdf, id=100, 662.475pt x 140.525pt>
-File: ../images/EasyModel/easy-model.pdf Graphic file (type pdf)
-
-<use ../images/EasyModel/easy-model.pdf>
-Package pdftex.def Info: ../images/EasyModel/easy-model.pdf used on input line 
-639.
-(pdftex.def)             Requested size: 338.58632pt x 71.82117pt.
- [7 <../images/EasyModel/easy-model.pdf>]
-PGFPlots: reading {../data/FullModel/TransPlot.dat}
-PGFPlots: reading {../data/EasyModel/TransPlot.dat}
-Missing character: There is no ; in font nullfont!
-PGFPlots: reading {../data/FullModel/TransPlotSwitchedTime.dat}
-PGFPlots: reading {../data/EasyModel/TransPlotSwitchedTime.dat}
-Missing character: There is no ; in font nullfont!
- [8] [9] (./lab10.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tests.aux) ) 
 Here is how much of TeX's memory you used:
- 26519 strings out of 494399
- 648865 string characters out of 6172184
- 2672186 words of memory out of 5000000
- 29314 multiletter control sequences out of 15000+600000
- 17335 words of font info for 42 fonts, out of 8000000 for 9000
+ 25712 strings out of 494399
+ 626536 string characters out of 6172184
+ 779614 words of memory out of 5000000
+ 28560 multiletter control sequences out of 15000+600000
+ 12686 words of font info for 33 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 62i,21n,100p,1064b,2321s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/
-labx0800.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1000.
-600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0600.600pk> </
-home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/sens
-erlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/senserlex/.te
-xmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/senserlex/.texmf-var/f
-onts/pk/ljfour/lh/lh-t2a/labx1095.600pk></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lab10.pdf (9 pages, 1130937 bytes).
+ 62i,17n,84p,800b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/sen
+serlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/senserlex/.t
+exmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/senserlex/.texmf-var/
+fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/senserlex/.texmf-var/fonts/pk/
+ljfour/lh/lh-t2a/labx1095.600pk></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on tests.pdf (1 page, 78005 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
+ 143 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

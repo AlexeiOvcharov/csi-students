@@ -13,41 +13,99 @@
 \usepackage{subcaption}
 \usepackage{pgfplots}
 \usetikzlibrary{pgfplots.polar}
+\pgfplotsset{compat=1.13}
+\pgfplotsset{grid = major, grid style = {dashed}}
 
+% PGFPlots Table ========================================================
 \usepackage{pgfplotstable}
+\renewcommand{\arraystretch}{1.5}
 % recommended:
 \usepackage{booktabs}
 \usepackage{colortbl}
+% pgfplotstable settings
+\pgfplotstableset{
+    columns/w/.style = {column name = {\boldmath$\omega$}, column type = |c},
+    columns/logW/.style = {column name = {\boldmath$\lg{\omega}$}, column type = |c},
+    columns/A/.style = {column name = {\boldmath$A(\omega)$}, column type = |c},
+    columns/logA/.style = {column name = {\boldmath$20\lg{A(\omega)}$}, column type = |c},
+    columns/psi/.style = {column name = {\boldmath$\psi$}, column type = |c|},
+    every head row/.style = {before row = \hline},
+    after row = {[1mm] \hline},
+}
 
 \usepackage{amsmath}
 \usepackage{float}
 
+% Table and figure setting ==============================================
+\usepackage{threeparttable}
+%Change label separator
+\usepackage{caption}
+\captionsetup[table]{labelformat=simple, labelsep = endash, justification = raggedright, singlelinecheck = off}
+\captionsetup[figure]{labelformat=simple, labelsep = endash, name = Рисунок}
+
+% Paragraph indent
+\usepackage{indentfirst}
+
+\usepackage{../titlepage/TAYTitle}
+\author{Овчаров Алексей}
+\title{Экспериментальное построение частотных характеристик типовых динамических звеньев}
+\labnumber{9}
+\variant{3}
+
 \begin{document}
+\maketitle
 
-\paragraph{Цель работы.} Изучение частотных характеристик типовых динамических звеньев и способов их построения.
-    
-\section*{Исходные данные.}
+\section{Задание}
+\textbf{Цель работы} - изучение частотных характеристик типовых динамических звеньев и способов их построения. \par
+Если на вход устойчивого линейного звена с передаточной функцией $W(s)$ подается гармонический сигнал $g(t) = g_m\sin{\omega t}$, то на его выходе в установившемся режиме будет гармонический сигнал $y(t) = y_m\sin{(\omega t + \psi)}$. Задача состоим в том, чтобы определить зависимость амплитуды $y_m(\omega)$ и разности фаз между выходым сигналом и входным $\psi(\omega)$ от частоты входного сигнала. Полученные графики получили название: амплитудно-частотная характеристика (АЧХ) и фазо-частотная характеристика (ФЧХ). \par
+В данной реботе необходимо получить АЧХ и ФЧХ линейных динамических звеньев, представленных в таблице 1, подставив в них параметры, указанные в таблице 2. После чего, на основе двух предыдущих характеристик, построить амплитудно-фазовую характеристику (АФЧХ).
 
-\begin{center}
-    \tabulinesep = 2mm
-    \begin{tabu} spread 1em{|[1pt]l|c|[1pt]}
-        \tabucline[1pt]{-}
-        Тип звена & Передаточная функция \\ \hline
-        Интегрирующее с замедлением & $\displaystyle\frac{K}{s(Ts + 1)}$ \\ \hline
-        Изодромное & $\displaystyle\frac{K(Ts + 1)}{s}$ \\ \hline
-        Консервативное & $\displaystyle\frac{K}{T^2s^2 + 1}$ \\
-        \tabucline[1pt]{-}
-    \end{tabu}
-    \hspace{2cm}
-    \begin{tabu}{|[1pt]c|c|c|[1pt]}
-        \tabucline[1pt]{-}
-        K & T & $\xi$ \\ \hline
-        10 & 2 & 0.25 \\
-        \tabucline[1pt]{-}
-    \end{tabu}
-\end{center}
+\begin{minipage}{0.7\textwidth}
+    \begin{table}[H]
+        \tabulinesep = 2mm
+        \caption{Исходные элементарные звенья}
+        \begin{tabu} spread 1em{|[1pt]l|c|[1pt]}
+            \tabucline[1pt]{-}
+            Тип звена & Передаточная функция \\ \hline
+            Интегрирующее с замедлением & $\displaystyle\frac{K}{s(Ts + 1)}$ \\ \hline
+            Изодромное & $\displaystyle\frac{K(Ts + 1)}{s}$ \\ \hline
+            Консервативное & $\displaystyle\frac{K}{T^2s^2 + 1}$ \\
+            \tabucline[1pt]{-}
+        \end{tabu}
+    \end{table}
+\end{minipage}
+\begin{minipage} {0.5\textwidth}
+    \begin{table}[H]
+        \tabulinesep = 2mm
+        \caption{Параметры}
+        \begin{tabu}{|[1pt]c|c|c|[1pt]}
+            \tabucline[1pt]{-}
+            K & T & $\xi$ \\ \hline
+            10 & 2 & 0.25 \\
+            \tabucline[1pt]{-}
+        \end{tabu}
+    \end{table}
+\end{minipage}
 
-\section*{Исследование интегрирующего звена с замедлением.}
+\newpage
+\section{Исследование интегрирующего звена с замедлением}
+
+В таблице 3 представлены данные, снятые по графикам переходных процессов. \par
+\begin{table}[h!]
+    \centering
+    \begin{threeparttable}
+        \caption{Полученные данные} \label{tab:perflogcross}
+        \pgfplotstabletypeset[]{data/data4.dat}
+    \end{threeparttable}
+\end{table}
+Передаточная функия исследуемого звена представлена в таблице 1. Из нее можно построить частотную функцию и найти выражения для АЧХ и ФЧХ.
+\begin{align}
+    W(j\omega) = \frac{-K(T\omega + j)}{\omega(T^2\omega^2 + 1)} \\
+    A(\omega) = \frac{K}{\omega\sqrt{T^2\omega^2 + 1}} \\
+    \psi(\omega) = \arctg{\frac{1}{T\omega}}
+\end{align}
+
+\newpage
 Экспериментально построенные характеристики данного звена представлены ниже.
 \begin{figure}[h!]
     \begin{subfigure}{0.5\textwidth}
@@ -61,7 +119,7 @@
                 \addplot table [x={w}, y={logA}] {data/data4.dat};
             \end{semilogxaxis}
         \end{tikzpicture}
-        \caption{График ЛАЧХ.}
+        \caption{График ЛАЧХ}
     \end{subfigure}
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -74,7 +132,7 @@
                 \addplot table [x={w}, y={psi}] {data/data4.dat};
             \end{semilogxaxis}
         \end{tikzpicture}
-        \caption{График ЛФЧХ.}
+        \caption{График ЛФЧХ}
     \end{subfigure}
     
     \vspace{0.5cm}
@@ -90,7 +148,7 @@
                 \addplot table [x={psi}, y={A}] {data/data4.dat};
             \end{polaraxis}
         \end{tikzpicture}
-        \caption{График АФЧХ.}
+        \caption{График АФЧХ}
     \end{subfigure}
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -103,66 +161,30 @@
                 \addplot table [x={psi}, y={logA}] {data/data4.dat};
             \end{polaraxis}
         \end{tikzpicture}
-        \caption{График ЛАФЧХ.}
+        \caption{График ЛАФЧХ}
     \end{subfigure}
-    \caption{Частотные характеристики интегрирующего звена с запаздыванием.}
+    \caption{Частотные характеристики интегрирующего звена с запаздыванием}
 \end{figure}
+
 \newpage
+\section{Исследование изодромного звена}
+В таблице 4 представлены данные, снятые по графикам переходных процессов.
+\begin{table}[h!]
+    \centering
+    \begin{threeparttable}
+        \caption{Полученные данные}
+        \pgfplotstabletypeset[]{data/data5.dat}
+    \end{threeparttable}
+\end{table}
 
-\begin{minipage}[t]{0.6\textwidth}
-    \vspace{-0.7cm}
-    \begin{table}[H]
-        \centering
-        \caption{Таблица данных.}
-        \pgfplotstabletypeset[
-            columns/w/.style = {column name = {\boldmath$\omega$}},
-            columns/logW/.style = {column name = {\boldmath$\lg{\omega}$}},
-            columns/A/.style = {column name = {\boldmath$A(\omega)$}},
-            columns/logA/.style = {column name = {\boldmath$20\lg{A(\omega)}$}},
-            columns/psi/.style = {column name = {\boldmath$\psi$}},
-            every head row/.style = {
-            before row = \toprule, after row = \midrule
-            },
-            every last row/.style = {after row = \bottomrule},
-        ]{data/data4.dat}
-    \end{table}
-\end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
-    Передаточная функия исследуемого звена представлена в исходных данных. Из нее можно построить частотную функцию и найти выражения для АЧХ и ФЧХ.
-    \begin{align}
-        W(j\omega) = \frac{-K(T\omega + j)}{\omega(T^2\omega^2 + 1)} \\
-        A(\omega) = \frac{K}{\omega\sqrt{T^2\omega^2 + 1}} \\
-        \psi(\omega) = \arctg{\frac{1}{T\omega}}
-    \end{align}
-\end{minipage}
+Передаточная функия исследуемого звена представлена в таблице 1. Из нее можно построить частотную функцию и найти выражения для АЧХ и ФЧХ.
+\begin{align}
+    W(j\omega) = \frac{K(T\omega - j)}{\omega} \\
+    A(\omega) = \frac{K\sqrt{T^2\omega^2 + 1}}{\omega} \\
+    \psi(\omega) = -\arctg{\frac{1}{T\omega}}
+\end{align}
 
-\section*{Исследование изодромного звена.}
-\begin{minipage}[t]{0.6\textwidth}
-    \vspace{-0.7cm}
-    \begin{table}[H]
-        \centering
-        \caption{Таблица данных.}
-        \pgfplotstabletypeset[
-            columns/w/.style = {column name = {\boldmath$\omega$}},
-            columns/logW/.style = {column name = {\boldmath$\lg{\omega}$}},
-            columns/A/.style = {column name = {\boldmath$A(\omega)$}},
-            columns/logA/.style = {column name = {\boldmath$20\lg{A(\omega)}$}},
-            columns/psi/.style = {column name = {\boldmath$\psi$}},
-            every head row/.style = {
-            before row = \toprule, after row = \midrule
-            },
-            every last row/.style = {after row = \bottomrule},
-        ]{data/data5.dat}
-    \end{table}
-\end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
-    Передаточная функия исследуемого звена представлена в исходных данных. Из нее можно построить частотную функцию и найти выражения для АЧХ и ФЧХ.
-    \begin{align}
-        W(j\omega) = \frac{K(T\omega - j)}{\omega} \\
-        A(\omega) = \frac{K\sqrt{T^2\omega^2 + 1}}{\omega} \\
-        \psi(\omega) = -\arctg{\frac{1}{T\omega}}
-    \end{align}
-\end{minipage}
+\newpage
 \begin{figure}[h!]
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -175,7 +197,7 @@
                 \addplot table [x={w}, y={logA}] {data/data5.dat};
             \end{semilogxaxis}
         \end{tikzpicture}
-        \caption{График ЛАЧХ.}
+        \caption{График ЛАЧХ}
     \end{subfigure}
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -188,7 +210,7 @@
                 \addplot table [x={w}, y={psi}] {data/data5.dat};
             \end{semilogxaxis}
         \end{tikzpicture}
-        \caption{График ЛФЧХ.}
+        \caption{График ЛФЧХ}
     \end{subfigure}
     
     \vspace{0.5cm}
@@ -204,7 +226,7 @@
                 \addplot table [x={psi}, y={A}] {data/data5.dat};
             \end{polaraxis}
         \end{tikzpicture}
-        \caption{График АФЧХ.}
+        \caption{График АФЧХ}
     \end{subfigure}
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -217,48 +239,34 @@
                 \addplot table [x={psi}, y={logA}] {data/data5.dat};
             \end{polaraxis}
         \end{tikzpicture}
-        \caption{График ЛАФЧХ.}
+        \caption{График ЛАФЧХ}
     \end{subfigure}
-    \caption{Частотные характеристики изодромного звена.}
+    \caption{Частотные характеристики изодромного звена}
 \end{figure}
 
-\section*{Исследование консервативного звена.}
-
-\begin{minipage}[t]{0.6\textwidth}
-    \vspace{-0.7cm}
-    \begin{table}[H]
-        \centering
-        \caption{Таблица данных.}
-        \pgfplotstabletypeset[
-            columns/w/.style = {column name = {\boldmath$\omega$}},
-            columns/logW/.style = {column name = {\boldmath$\lg{\omega}$}},
-            columns/A/.style = {column name = {\boldmath$A(\omega)$}},
-            columns/logA/.style = {column name = {\boldmath$20\lg{A(\omega)}$}},
-            columns/psi/.style = {column name = {\boldmath$\psi$}},
-            every head row/.style = {
-            before row = \toprule, after row = \midrule
-            },
-            every last row/.style = {after row = \bottomrule},
-        ]{data/data7.dat}
-    \end{table}
-\end{minipage}
-\begin{minipage}[t]{0.4\textwidth}
-Ниже в таблице 3 представлены данные о частоте, фазе и амплитуде после графического сравнения графика входного воздействия и выходного. Из-за сильного искажения выходного сигнала (консерванивное звено обладает собственными колебаниями, амплитуда которых увеличивется с увеличением частоты) данные полностью снять не представлялось возможным. \par
-Ниже представлены выражения частотных характеристик.
-    \begin{align}
-        W(j\omega) = \frac{K}{1 - T^2\omega^2} \\
-        A(\omega) = \frac{K}{|1 - T^2\omega^2|}
-    \end{align}
-\end{minipage}
 \newpage
-\begin{equation}
-    \psi(\omega) = \begin{cases}
+\section{Исследование консервативного звена}
+В таблице 5 представлены данные о частоте, фазе и амплитуде после графического сравнения графика входного воздействия и выходного. Из-за сильного искажения выходного сигнала (консерванивное звено обладает собственными колебаниями, амплитуда которых увеличивется с увеличением частоты) данные полностью снять не представлялось возможным. \par
+\begin{table}[h!]
+    \centering
+    \begin{threeparttable}
+        \caption{Полученные данные}
+        \pgfplotstabletypeset[]{data/data7.dat}
+    \end{threeparttable}
+\end{table}
+
+Ниже представлены выражения частотных характеристик.
+\begin{align}
+    W(j\omega) & = \frac{K}{1 - T^2\omega^2} \\
+    A(\omega) & = \frac{K}{|1 - T^2\omega^2|} \\ 
+    \psi(\omega) & = \begin{cases}
         0, & \omega < \frac{1}{T} \\
         -180, & \omega > \frac{1}{T}
     \end{cases}
-\end{equation}
+\end{align}
 
-Ниже на рисунке 3 представлены графики по данным, которые были сняты графически и полученные аналитически из выражения (8). Как видно из графиков, чем меньше частота колебаний - тем меньше амплитуда собственных колебаний системы.
+\newpage
+На рисунке 3 представлены графики по данным, которые были сняты графически и полученные аналитически из выражения (8). Как видно из графиков, чем меньше частота колебаний - тем меньше амплитуда собственных колебаний системы.
 \begin{figure}[h!]
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -270,10 +278,10 @@
                 ]
                 \addplot table [x={w}, y={logA}] {data/data7.dat};
                 \addplot[red, thick, mark = none, style = dashed] table [x={w}, y={logA}] {data/data7-full.dat};
-                \legend{\text{\scriptsize Эксперимент}, \text{\scriptsize Теория}}
+                \legend{\text{\scriptsize Моделирование}, \text{\scriptsize Теория}}
             \end{semilogxaxis}
         \end{tikzpicture}
-        \caption{График ЛАЧХ.}
+        \caption{График ЛАЧХ}
     \end{subfigure}
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -285,10 +293,10 @@
                 ]
                 \addplot table [x={w}, y={psi}] {data/data7.dat};
                 \addplot[red, thick, mark = none, style = dashed] table [x={w}, y={psi}] {data/data7-full.dat};
-                \legend{\text{\scriptsize Эксперимент}, \text{\scriptsize Теория}}
+                \legend{\text{\scriptsize Моделирование}, \text{\scriptsize Теория}}
             \end{semilogxaxis}
         \end{tikzpicture}
-        \caption{График ЛФЧХ.}
+        \caption{График ЛФЧХ}
     \end{subfigure}
     
     \vspace{0.5cm}
@@ -303,10 +311,10 @@
                 ]
                 \addplot table [x={psi}, y={A}] {data/data7.dat};
                 \addplot[red, thick, mark = none, style = dashed] table [x={psi}, y={A}] {data/data7-full.dat};
-                \legend{\text{\scriptsize Эксперимент}, \text{\scriptsize Теория}}
+                \legend{\text{\scriptsize Моделирование}, \text{\scriptsize Теория}}
             \end{polaraxis}
         \end{tikzpicture}
-        \caption{График АФЧХ.}
+        \caption{График АФЧХ}
     \end{subfigure}
     \begin{subfigure}{0.5\textwidth}
         \centering
@@ -318,15 +326,19 @@
                 ]
                 \addplot table [x={psi}, y={logA}] {data/data7.dat};
                 \addplot[red, thick, mark = none, style = dashed] table [x={psi}, y={logA}] {data/data7-full.dat};
-                \legend{\text{\scriptsize Эксперимент}, \text{\scriptsize Теория}}
+                \legend{\text{\scriptsize Моделирование}, \text{\scriptsize Теория}}
             \end{polaraxis}
         \end{tikzpicture}
-        \caption{График ЛАФЧХ.}
+        \caption{График ЛАФЧХ}
     \end{subfigure}
-    \caption{Частотные характеристики консервативного звена.}
+    \caption{Частотные характеристики консервативного звена}
 \end{figure}
 
+\newpage
 \section*{Выводы}
-В данной работе мы исследовали частотные характеристике трех звеньев: интегрирующего с запаздыванием, изодромного, консервативного. Получили экспериментально графики частотных характеристик и сравнили их с соответствующими выражениями. При отрицательных вещественных корнях характеристического уравнения, выходной гармонических сигнал будет колебаться с той же частотай, что и входной, но с измененной амплитудой и фазой. При чисто мнимых корнях проявляются собственные колебания системы, что приводит к генерации двух гармоник разной частоты (частоты входного сигнала и $1/T$). Соответственно выходной сигнал будет сильно изменен.
+В данной работе мы исследовали частотные характеристике трех звеньев: интегрирующего с запаздыванием, изодромного, консервативного. Получили экспериментально графики частотных характеристик и сравнили их с соответствующими выражениями. \par
+При отрицательных вещественных корнях характеристического уравнения, выходной гармонических сигнал будет колебаться с той же частотай, что и входной, но с измененной амплитудой и фазой. При чисто мнимых корнях проявляются собственные колебания системы, что приводит к генерации двух гармоник разной частоты (частоты входного сигнала и $1/T$). Соответственно выходной сигнал будет сильно изменен. \par
+Как видно из рисунка 1, 2 и 3, при частоте $\omega_c = 1/T = 0.5$ ЛАЧХ изменяет наклон, что соответствует теории. Фазовый сдвиг интегрирующего звена с замедление изменяется с $-90^{\circ}$ до $-180^{\circ}$, изодромного соответсвенно от $-90^\circ$ до $0^\circ$ и у консервативного от $0^\circ$ до $-180^\circ$.
+
 
 \end{document}

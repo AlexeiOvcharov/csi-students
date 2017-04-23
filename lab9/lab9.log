@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  9 APR 2017 17:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  24 APR 2017 00:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab9.tex
+**lab9
 (./lab9.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 12 language(s) loaded.
@@ -1174,29 +1174,43 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box45
 \@float@everytoks=\toks44
 \@floatcapt=\box46
+)
+(/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+Package: threeparttable 2003/06/13  v 3.0
+\@tempboxb=\box47
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+(../titlepage/TAYTitle.sty
+
+LaTeX Warning: You have requested package `../titlepage/TAYTitle',
+               but the package provides `TAYTitle'.
+
+Package: TAYTitle 2015/08/10 v.01 an example package
+ for wikibooks
 ) (./lab9.aux)
 \openout1 = `lab9.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count146
 \scratchdimen=\dimen272
-\scratchbox=\box47
+\scratchbox=\box48
 \nofMPsegments=\count147
 \nofMParguments=\count148
 \everyMPshowfont=\toks45
@@ -1285,88 +1299,83 @@ e
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.13}).
 
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
-ick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into 
-your preamble.
- on input line 25.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 56.
 
-PGFPlots: reading {data/data4.dat}
-PGFPlots: reading {data/data4.dat}
+LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 56.
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 53--79
-[]$[]$ $[]$ 
- []
 
-PGFPlots: reading {data/data4.dat}
-PGFPlots: reading {data/data4.dat}
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 82--108
-[]$[]$ $[]$ 
- []
+LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 56.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (116.1595pt too wide) in paragraph at lines 63--89
+[]$[]$ $[]$ 
+ []
+
+[1]
+PGFPlots: reading {data/data4.dat}
+ [2]
+Package pgfplots info on input line 118: Using 'lua backend=false' for axis: xm
+ode=log unsupported (yet).
+PGFPlots: reading {data/data4.dat}
+Package pgfplots info on input line 131: Using 'lua backend=false' for axis: xm
+ode=log unsupported (yet).
 PGFPlots: reading {data/data4.dat}
 
-Underfull \hbox (badness 3635) in paragraph at lines 131--132
-[]\T2A/cmr/m/n/10.95 Передаточная фун-кия ис-сле-ду-е-мо-го
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 111--137
+[]$[]$ $[]$ 
  []
 
+PGFPlots: reading {data/data4.dat}
+PGFPlots: reading {data/data4.dat}
 
-Overfull \hbox (19.4216pt too wide) in paragraph at lines 112--138
-[][] [] 
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 140--166
+[]$[]$ $[]$ 
  []
 
+[3]
+PGFPlots: reading {data/data5.dat}
+ [4]
+Package pgfplots info on input line 196: Using 'lua backend=false' for axis: xm
+ode=log unsupported (yet).
+PGFPlots: reading {data/data5.dat}
+Package pgfplots info on input line 209: Using 'lua backend=false' for axis: xm
+ode=log unsupported (yet).
 PGFPlots: reading {data/data5.dat}
 
-Underfull \hbox (badness 3635) in paragraph at lines 159--160
-[]\T2A/cmr/m/n/10.95 Передаточная фун-кия ис-сле-ду-е-мо-го
- []
-
-PGFPlots: reading {data/data5.dat}
-PGFPlots: reading {data/data5.dat}
-
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 167--193
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 189--215
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/data5.dat}
 PGFPlots: reading {data/data5.dat}
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 196--222
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 218--244
 []$[]$ $[]$ 
  []
 
-
-Overfull \hbox (2.4216pt too wide) in paragraph at lines 140--224
-[] []
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+[5]
 PGFPlots: reading {data/data7.dat}
-
-Underfull \hbox (badness 1810) in paragraph at lines 247--248
-[]\T2A/cmr/m/n/10.95 Ниже пред-став-ле-ны вы-ра-же-ния ча-
- []
-
-
-Overfull \hbox (2.4216pt too wide) in paragraph at lines 227--253
-[] [] 
- []
-
-[2] [3]
+ [6]
+Package pgfplots info on input line 278: Using 'lua backend=false' for axis: xm
+ode=log unsupported (yet).
 PGFPlots: reading {data/data7.dat}
 PGFPlots: reading {data/data7-full.dat}
+Package pgfplots info on input line 293: Using 'lua backend=false' for axis: xm
+ode=log unsupported (yet).
 PGFPlots: reading {data/data7.dat}
 PGFPlots: reading {data/data7-full.dat}
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 263--293
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 271--301
 []$[]$ $[]$ 
  []
 
@@ -1375,36 +1384,45 @@ PGFPlots: reading {data/data7-full.dat}
 PGFPlots: reading {data/data7.dat}
 PGFPlots: reading {data/data7-full.dat}
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 296--326
+Overfull \hbox (2.42162pt too wide) in paragraph at lines 304--334
 []$[]$ $[]$ 
  []
 
-[4] (./lab9.aux) ) 
+[7] [8] (./lab9.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.74pt have occurred.
+
+ ) 
 Here is how much of TeX's memory you used:
- 26460 strings out of 494399
- 647387 string characters out of 6172184
- 861396 words of memory out of 5000000
- 29290 multiletter control sequences out of 15000+600000
- 15449 words of font info for 42 fonts, out of 8000000 for 9000
+ 26577 strings out of 494399
+ 649377 string characters out of 6172184
+ 857583 words of memory out of 5000000
+ 29389 multiletter control sequences out of 15000+600000
+ 21900 words of font info for 54 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 62i,22n,104p,1185b,2472s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm08
-00.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.600pk>
- </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/s
-enserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/senserlex/
-.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1095.600pk></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lab9.pdf (4 pages, 155380 bytes).
+ 62i,22n,104p,899b,2507s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.600pk> </home
+/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1095.600pk> </home/senserle
+x/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/senserlex/.texmf-
+var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/senserlex/.texmf-var/fonts
+/pk/ljfour/lh/lh-t2a/larm1095.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfou
+r/lh/lh-t2a/labx2074.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t
+2a/larm1440.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm07
+00.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb>
+Output written on lab9.pdf (9 pages, 206294 bytes).
 PDF statistics:
- 206 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 368 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

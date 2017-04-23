@@ -13,21 +13,37 @@
 \usepackage{amsmath,booktabs}
 \usepackage{array}
 
+\usepackage{tabu}
+
+%Change label separator
+\usepackage{caption}
+\captionsetup[table]{labelformat=simple, labelsep = endash}
+\captionsetup[figure]{labelformat=simple, labelsep = endash}
+
+\usepackage{../titlepage/TAYTitle}
+\author{Овчаров Алексей}
+\title{Анализ точности систем управления}
+\labnumber{7}
+\variant{3}
+
 \begin{document}
+\maketitle
 
-\section*{Цель работы}
-Исследование свойст систем управления.
-\section*{Исходные данные}
-\begin{center}
-    \begin{tabular}{cccccccccc}
-        \toprule
-        $W(s)$ & $g = A$ & $g = Vt$ & $g = at^2/2$ & Вариант схемы & $f_1$ & $f_2$ & Сигнал задания \\  \midrule
+\paragraph{Цель работы.}Исследование свойст систем управления.
+\paragraph{Исходные данные} Ниже в таблице 1 представленны параметры системы и возмущающих воздействий.
+\begin{table} [h!]
+    \centering
+    \caption{Исходные данные.}
+    \tabulinesep = 2mm
+    \begin{tabu} spread 1em{|c|c|c|c|c|c|c|c|}
+        \hline
+        $W(s)$ & $g = A$ & $g = Vt$ & $g = at^2/2$ & Вариант схемы & $f_1$ & $f_2$ & Сигнал задания \\  \hline
         $\aligned \frac{1.5}{0.5s + 1} \endaligned$ & 2 & 4t & $0.2t^2$ & a) & -0.5 & 1 & $0.5t + 2\cos{(0.1t)}$ \rule{0pt}{5pt} \\ 
-        \bottomrule
-    \end{tabular}
-\end{center}
+        \hline
+    \end{tabu}
+\end{table}
 
-\section*{Исследование системы с астатизмом нулевого порядка.}
+\section*{Исследование системы с астатизмом нулевого порядка}
 
 \paragraph{Исследование стационарного режима работы: $g(t) = 2$.}
 На рисунке 1 представлена диаграмма модели при входном воздействии g = 2, а также полученные графики (рисунок 2) при различных значениях $H(s) = k$. \par
@@ -54,8 +70,6 @@
     \varepsilon|_{k = 1} & = 0.8 & \varepsilon|_{k = 5} & \approx 0.235 & \varepsilon|_{k = 10} & = 0.125
 \end{align*}
 
-
-\newpage
 \paragraph{Исследование режима работы с постоянной скоростью: $g(t) = 4t$.}
 Далее на рисунках 3 и 4 представлены модель и графики моделирования исходной системы при постоянной скорости.
 \begin{figure}[h!]
@@ -65,11 +79,12 @@
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 0.8\textwidth]{images/graph1-2.pdf}
+    \includegraphics[width = \textwidth]{images/graph1-2.pdf}
     \caption{График при различных k.}
 \end{figure}
 
-\section*{Исследование системы с астатизмом первого порядка.}
+\newpage
+\section*{Исследование системы с астатизмом первого порядка}
 \paragraph{Исследование стационарного режима работы: $g(t) = 2$.} На рисунках 5 и 6 представлены диаграмма модели и соответственно полученные графики при различных k.
 
 \begin{minipage}[t]{0.5\textwidth}
@@ -93,7 +108,7 @@
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 0.8\textwidth]{images/graph2-1.pdf}
+    \includegraphics[width = \textwidth]{images/graph2-1.pdf}
     \caption{Графики при различных k.}
 \end{figure}
 
@@ -121,18 +136,19 @@
 \end{minipage}
 
 \begin{figure}[h!]
-    \centering
-    \begin{subfigure}{0.33\textwidth}
+    \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width = \textwidth]{images/graph2-2-K1.pdf}
         \caption{k = 1}
     \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
+    \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width = \textwidth]{images/graph2-2-K5.pdf}
         \caption{k = 5}
     \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
+
+    \centering
+    \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width = \textwidth]{images/graph2-2-K10.pdf}
         \caption{k = 10}
@@ -140,7 +156,7 @@
     \caption{Графики при различных k.}
 \end{figure}
 
-
+\newpage
 \paragraph{Исследование движения с постоянным ускорением: $g(t) = 0.2t^2$.} На рисунках 9 и 10 представлены диаграмма модели и соответственно полученные графики при различных k.
 
 \begin{figure}[h!]
@@ -150,18 +166,20 @@
 \end{figure}
 
 \begin{figure}[h!]
-    \centering
-    \begin{subfigure}{0.33\textwidth}
+
+    \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width = \textwidth]{images/graph2-3-K1.pdf}
         \caption{k = 1}
     \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
+    \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width = \textwidth]{images/graph2-3-K5.pdf}
         \caption{k = 5}
     \end{subfigure}
-    \begin{subfigure}{0.33\textwidth}
+
+    \centering
+    \begin{subfigure}{0.5\textwidth}
         \centering
         \includegraphics[width = \textwidth]{images/graph2-3-K10.pdf}
         \caption{k = 10}
@@ -170,18 +188,17 @@
 \end{figure}
 
 \newpage
-
-\section*{Исследование влияния внешних возмущений.}
+\section*{Исследование влияния внешних возмущений}
 На рисунках 11 и 12 представлены диаграмма модели и соответственно полученные графики при различных значениях шумов $f_1$ и $f_2$.
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 0.5\textwidth]{images/model3.pdf}
+    \includegraphics[width = 0.7\textwidth]{images/model3.pdf}
     \caption{Схема моделирования.}
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 0.65\textwidth]{images/graph3.pdf}
+    \includegraphics[width = \textwidth]{images/graph3.pdf}
     \caption{Графики при различных значениях шумов.}
 \end{figure}
 
@@ -199,7 +216,7 @@
 \end{align*}
 
 \newpage
-\section*{Исследование установившейся ошибки при произвольном входном воздействии.}
+\section*{Исследование установившейся ошибки при произвольном входном воздействии}
 На рисунках 13 и 14 представлены диаграмма модели и соответственно полученные графики при различных значениях шумов $f_1$ и $f_2$.
 
 \begin{figure}[h!]
@@ -209,7 +226,7 @@
 \end{figure}
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 0.65\textwidth]{images/graph4.pdf}
+    \includegraphics[width = 0.9\textwidth]{images/graph4.pdf}
     \caption{Графики ошибки, выходного и входного сигнала.} 
 \end{figure}
 
@@ -247,12 +264,12 @@
 Теперь можем получить графики ошибки, разложенной в ряд и реальной.
 \begin{figure}[h!]
     \centering
-    \includegraphics[width = 0.8\textwidth]{images/graph4withTailor.pdf}
+    \includegraphics[width = 0.9\textwidth]{images/graph4withTailor.pdf}
     \caption{Графики ошибок.}
 \end{figure}
 
 
-\section*{Выводы.}
+\section*{Выводы}
 В данной работе мы исследновали системы с различным астатизмом, при налчии внешних возмущений и при произвольно входном воздействии. Получили значения и выражение для предельного значения установившейся ошибки и построили графики переходной характеристики. \par
 При исследовании стационарного режима работы, убедились в том, что при g = A, и увеличении коэффициента усиления k ошибка стремиться к нулю. 
 Убедились в том, что при увеличении прядка астатизма, ошибка, при статическом вохдном возвдействии ошибка равна нулю.
