@@ -7,9 +7,9 @@ n_0 = 4000;4
 I_n = 6.5;
 M_n = 0.57;
 R = 0.85;
-T_a = 3*10^(-3)/10;
+T_a = 3*10^(-3);
 J_d = 2.2*10^(-4);
-T_y = 6*10^(-3)/10;
+T_y = 6*10^(-3);
 i = 40;
 J_m = 0.15;
 U_m = 10;
@@ -35,18 +35,18 @@ T_m = R*J_summ/(K_m*K_e);
 // Paths
 path = "/home/senserlex/homeworks/TAY/csi-students/lab10/";
 modleName = "models/full-model.zcos";
-dataFile = "data/FullModel/GearRatioWithMoment.dat";
+dataFile = "data/FullModel/InertiaMoment.dat";
 
 // Load model
 loadXcosLibs(); loadScicos();
 importXcosDiagram(path + modleName);
 typeof(scs_m);
 
-simulation_time = 2;
+simulation_time = 3;
 dt = 0.001;
 U = 5;
-Mcm = M_n*i/2;
-//Mcm = 0;
+//Mcm = M_n*i/2;
+Mcm = 0;
 
 differDat = [];
 dta = [];
@@ -54,35 +54,38 @@ fullData = [];
 t_p = 0;
 
 ratio = i;
+J = J_m;
 x = 1;
 //for prefix = ["w", "U", "I", "alpha"]
-//fullData = [];
-//filename = dataFile + "-" + prefix + ".dat";
+//    fullData = [];
+//    filename = dataFile + "-" + prefix + ".dat";
 
-for i = [ratio - 0.75*ratio:1.5*ratio/4:ratio + 0.75*ratio]
-    J_summ = J_d + 0.2*J_d + J_m/i^2;
+    for J_m = [J - 0.5*J:J/4:J + 0.5*J]
+//    for i = [ratio - 0.75*ratio:1.5*ratio/4:ratio + 0.75*ratio]
+        J_summ = J_d + 0.2*J_d + J_m/i^2;
 
-//     Simulate
-    scicos_simulate(scs_m);
-
-    w_stab = data.values(size(data.values, 1), 1);
-    I_stab = data.values(size(data.values, 1), 3);
-    differDat = abs(data.values(:, 1) - w_stab)/w_stab;
-
-    for n = [2:size(differDat, 1)]
-        if differDat(n) <= 0.5 & differDat(n - 1) > 0.5 then
-            t_p = data.time(n);
+        // Simulate
+        scicos_simulate(scs_m);
+ 
+        w_stab = data.values(size(data.values, 1), 1);
+        I_stab = data.values(size(data.values, 1), 3);
+        differDat = abs(data.values(:, 1) - w_stab)/w_stab;
+    
+        for n = [2:size(differDat, 1)]
+            if differDat(n) <= 0.5 & differDat(n - 1) > 0.5 then
+                t_p = data.time(n);
+            end
         end
+
+        dta(size(dta, 1) + 1, :) = [J_m, t_p, w_stab, I_stab];
+//        dta(size(dta, 1) + 1, :) = [t_p, w_stab];
+        fullData(:, size(fullData, 2) + 1) = data.values(:, x);
+//        write(path+dataFile, [data.time, data.values]);
+        plot2d(data.time, data.values(:, :));
     end
-    dta(size(dta, 1) + 1, :) = [i, t_p, w_stab, I_stab];
-//    dta(size(dta, 1) + 1, :) = [t_p, w_stab];
-    fullData(:, size(fullData, 2) + 1) = data.values(:, x);
-//    write(path+dataFile, [data.time, data.values]);
-    plot2d(data.time, data.values(:, :));
-end
-//fullData = [data.time, fullData];
-//write(path+filename, fullData);
-//x = x +1;
+//    fullData = [data.time, fullData];
+//    write(path+filename, fullData);
+//    x = x +1;
 //end
 write(path+dataFile, dta);
 //write(path+dataFile, [data.time, data.values]);
