@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  26 APR 2017 20:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  26 APR 2017 21:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1192,20 +1192,20 @@ Package: TAYTitle 2015/08/10 v.01 an example package
 ) (./lab9.aux)
 \openout1 = `lab9.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count146
@@ -1305,72 +1305,72 @@ ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.13}).
 
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 59.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 58.
 
 LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 59.
+(Font)              size <20.74> substituted on input line 58.
 
 
 LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 59.
+(Font)              size <20.74> substituted on input line 58.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
 PGFPlots: reading {data/data4.dat}
  [2]
-Package pgfplots info on input line 117: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 116: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data4.dat}
-Package pgfplots info on input line 130: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 129: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data4.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 110--136
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 109--135
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/data4.dat}
 PGFPlots: reading {data/data4.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 139--165
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 138--164
 []$[]$ $[]$ 
  []
 
 [3]
 PGFPlots: reading {data/data5.dat}
  [4]
-Package pgfplots info on input line 195: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 194: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data5.dat}
-Package pgfplots info on input line 208: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 207: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data5.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 188--214
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 187--213
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/data5.dat}
 PGFPlots: reading {data/data5.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 217--243
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 216--242
 []$[]$ $[]$ 
  []
 
 [5]
 PGFPlots: reading {data/data7.dat}
  [6]
-Package pgfplots info on input line 277: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 276: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data7.dat}
 PGFPlots: reading {data/data7-full.dat}
-Package pgfplots info on input line 292: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 291: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/data7.dat}
 PGFPlots: reading {data/data7-full.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 270--300
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 269--299
 []$[]$ $[]$ 
  []
 
@@ -1379,7 +1379,7 @@ PGFPlots: reading {data/data7-full.dat}
 PGFPlots: reading {data/data7.dat}
 PGFPlots: reading {data/data7-full.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 303--333
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 302--332
 []$[]$ $[]$ 
  []
 
@@ -1413,7 +1413,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmsy8.pfb>
-Output written on lab9.pdf (9 pages, 203406 bytes).
+Output written on lab9.pdf (9 pages, 203491 bytes).
 PDF statistics:
  357 PDF objects out of 1000 (max. 8388607)
  84 compressed objects within 1 object stream
