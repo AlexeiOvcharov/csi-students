@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt]{article}
+\documentclass[a4paper, 12pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1, T2A]{fontenc}
@@ -16,7 +16,7 @@
 
 % PGFPlots Table ========================================================
 \usepackage{pgfplotstable}
-\renewcommand{\arraystretch}{1.5}
+\renewcommand{\arraystretch}{1.3}
 % recommended:
 \usepackage{booktabs}
 \usepackage{colortbl}
@@ -34,6 +34,7 @@
 
 % Paragraph indent
 \usepackage{indentfirst}
+\setlength{\parindent}{15mm}
 
 %Change label separator
 \usepackage{caption}
@@ -55,14 +56,14 @@
 Необходимо по известной модели электромеханического объекта (ЭМО) построить схему и провести математическое моделирование при различных параметрах системы. Функциональная схема исследумого объекта представлена на рисунке 1.
 \begin{figure} [h!]
     \centering
-    \includegraphics[width = \textwidth]{images/EMO.png}
+    \includegraphics[width = 0.7\textwidth]{images/EMO.png}
     \caption{Функциональная схема ЭМО}
 \end{figure} \par
 Усилительно-преобразовательное устройство (УПУ) описывается следующим уравнением:
 \begin{equation}
     T_y\dot{U_y} + U_y = K_yU
 \end{equation} \par
-УПУ подключается к электродвигателю (ЭД) - двигетлю постоянного тока (ДПТ), к которому пеодключен исполнительный механизм (ИМ) чере редуктор (Р) с целью снизить момент на роторе двигателя. Описанную систему можно описать следующими уравнениями.
+УПУ подключается к электродвигателю (ЭД) - двигетлю постоянного тока (ДПТ), к которому пеодключен исполнительный механизм (ИМ) через редуктор (Р) с целью снизить момент на роторе двигателя. Описанную систему можно описать следующими уравнениями.
 \begin{align}
     T_\text{я}\dot{I} + I & = K_\text{д}(U_y + K_e\omega_Mi_p) &
     K_\text{м} - \frac{M_\text{СМ}}{i_p} & = J_\Sigma\dot{\omega}_Mi &
@@ -116,7 +117,7 @@
         \dot{I} = - \frac{k_\text{д}k_e}{T_\text{я}}\omega - \frac{1}{T_\text{я}}I + \frac{k_\text{д}}{T_\text{я}}U_y \\
         \dot{U_y} = -\frac{1}{T_y}U_y + \frac{k_y}{T_y}U
     \end{cases}
-\end{equation}
+\end{equation} \par
 Теперь, приняв за вектор состояния $X = \begin{bmatrix} \alpha & \omega & I & U_y \end{bmatrix}^T$ и $\dot{\alpha} = \omega$, получим следующую модель вход состояние выход (ВСВ).
 
 \begin{align}
@@ -225,7 +226,7 @@
     \begin{tikzpicture}
         \begin{axis} [
             width = 0.7\textwidth,
-            height = 48mm,
+            height = 7cm,
             xlabel = {$t$, c},
             ylabel = {$\omega$, 1/c},
             grid = major,
@@ -242,6 +243,7 @@
     \caption{Переходные процессы в ДПТ}
 \end{figure}
 
+\newpage
 Ниже предсавлены графки переходных процессов двигателя при $T_y = 6\cdot10^{-4}$ c и $T_\text{Я} = 3\cdot10^{-4}$ c.
 
 \begin{figure}[h!]
@@ -249,7 +251,7 @@
     \begin{tikzpicture}
         \begin{axis} [
             width = 0.7\textwidth,
-            height = 48mm,
+            height = 7cm,
             xlabel = {$t$, c},
             ylabel = {$\omega$, 1/c},
             grid = major,
@@ -273,7 +275,7 @@
 
 \newpage
 \section{Исследование влияния момента сопротивленя $M_\text{СМ}$}
-На рисунке 4 представлены переходные процессы ДПТ при различных значениях нагрузочного момента $M_\text{СМ}$.
+На рисунке 5 представлены переходные процессы ДПТ при различных значениях нагрузочного момента $M_\text{СМ}$.
 
 
 \begin{figure}[h!]
@@ -281,13 +283,16 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$\omega$, 1/c},
                 xlabel = {$t$, c},
                 legend pos=south east,
                 grid = major,
                 grid style = {dashed},
                 xmin = 0, xmax = 0.3,
+                extra y ticks={5, 4.61, 4.23, 3.85, 3.46},
+                extra y tick style={grid style={black, thick, dashed}},
+                ytick = {0, 2},
             ]
                 \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = w1] {data/FullModel/Moment-w.dat};
                 \addplot[blue, mark = none, thick, smooth, dashed] table [x = t, y = w2] {data/FullModel/Moment-w.dat};
@@ -302,14 +307,16 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$I$, A},
                 xlabel = {$t$, c},
                 legend pos=north east,
                 grid = major,
                 grid style = {dashed},
                 xmin = 0, xmax = 0.3,
-                %legend style = {font = \tiny},
+                extra y ticks={0, 0.52, 1.04, 1.56, 2.08},
+                extra y tick style={grid style={black, thick, dashed}},
+                ytick = {4, 6},
             ]
                 \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = I1] {data/FullModel/Moment-I.dat};
                 \addplot[blue, mark = none, thick, smooth, dashed] table [x = t, y = I2] {data/FullModel/Moment-I.dat};
@@ -326,7 +333,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$\alpha_M$, \text{градусы}},
                 xlabel = {$t$, c},
                 legend pos=north west,
@@ -347,7 +354,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$U$, B},
                 xlabel = {$t$, c},
                 legend pos=south east,
@@ -380,14 +387,14 @@
 
 \newpage
 \section{Исследование влеяния момента инерции нагрузки $J_\text{М}$}
-На рисунке 5 представлены графики переходных процессов при различных значениях момента инерции нагрузки $J_\text{М}$.
+На рисунке 6 представлены графики переходных процессов при различных значениях момента инерции нагрузки $J_\text{М}$.
 
 \begin{figure}[h!]
     \begin{subfigure}{0.5\textwidth}
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$\omega$, 1/c},
                 xlabel = {$t$, c},
                 legend pos=south east,
@@ -408,7 +415,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$I$, A},
                 xlabel = {$t$, c},
                 legend pos=north east,
@@ -431,7 +438,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$\alpha_M$, \text{градусы}},
                 xlabel = {$t$, c},
                 legend pos=north west,
@@ -452,7 +459,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$U$, B},
                 xlabel = {$t$, c},
                 legend pos=south east,
@@ -484,20 +491,22 @@
 
 \newpage
 \section{Исследование влияния передаточного отношения $i_p$ редукотора}
-На рисунке 6 представлены графики преходных процессов при различных значениях передаточного отношения и нулевом моменте нагрузки $M_\text{СМ} = 0$.
+На рисунке 7 представлены графики преходных процессов при различных значениях передаточного отношения и нулевом моменте нагрузки $M_\text{СМ} = 0$.
 
 \begin{figure}[h!]
     \begin{subfigure}{0.5\textwidth}
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$\omega$, 1/c},
                 xlabel = {$t$, c},
                 legend pos=south east,
                 grid = major,
                 grid style = {dashed},
                 xmin = 0, xmax = 0.9,
+                extra y ticks={5},
+                extra tick style={grid=major},
             ]
                 \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = w1] {data/FullModel/GearRatio-w.dat};
                 \addplot[blue, mark = none, thick, smooth, dashed] table [x = t, y = w2] {data/FullModel/GearRatio-w.dat};
@@ -512,7 +521,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$I$, A},
                 xlabel = {$t$, c},
                 legend pos=north east,
@@ -535,7 +544,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$\alpha_M$, \text{градусы}},
                 xlabel = {$t$, c},
                 legend pos=north west,
@@ -556,7 +565,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$U$, B},
                 xlabel = {$t$, c},
                 legend pos=south east,
@@ -586,20 +595,27 @@
     \end{threeparttable}
 \end{table}
 
-На рисунке 7 представлены графики преходных процессов при различных значениях передаточного отношения и не нулевом моменте нагрузки $M_\text{СМ} = M_\text{Н}i_p/2$, при $i_p = 40$.
+На рисунке 8 представлены графики преходных процессов при различных значениях передаточного отношения и не нулевом моменте нагрузки $M_\text{СМ} = M_\text{Н}i_p/2$, при $i_p = 40$.
 
 \begin{figure}[h!]
     \begin{subfigure}{0.5\textwidth}
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$\omega$, 1/c},
                 xlabel = {$t$, c},
                 legend pos=south east,
                 grid = major,
                 grid style = {dashed},
                 xmin = 0, xmax = 0.9,
+                extra y ticks={4.56, 4.44, 4.23, 3.77, 1.93},
+                extra y tick labels={4.56, , 4.23, 3.77, 1.93},
+                extra y tick style={grid style={black, thick, dashed}},
+                ytick = {0, 1, 3},
+                after end axis/.code={
+                    \node  at (axis cs:0.9,4.16) [anchor=south west, align=left] {4.44};
+                }
             ]
                 \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = w1] {data/FullModel/GearRatioWithMoment-w.dat};
                 \addplot[blue, mark = none, thick, smooth, dashed] table [x = t, y = w2] {data/FullModel/GearRatioWithMoment-w.dat};
@@ -614,13 +630,20 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$I$, A},
                 xlabel = {$t$, c},
                 legend pos=north east,
                 grid = major,
                 grid style = {dashed},
                 xmin = 0, xmax = 0.9,
+                extra y ticks={4.15, 1.66, 1.04, 0.75, 0.59},
+                extra y tick labels={4.15, 1.66, 1.04, , 0.59},
+                extra y tick style={grid style={black, thick, dashed}},
+                ytick = {0, 6},
+                after end axis/.code={
+                    \node  at (axis cs:0.9,0.4) [anchor=south west, align=left] {0.75};
+                }
             ]
                 \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = I1] {data/FullModel/GearRatioWithMoment-I.dat};
                 \addplot[blue, mark = none, thick, smooth, dashed] table [x = t, y = I2] {data/FullModel/GearRatioWithMoment-I.dat};
@@ -637,7 +660,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$\alpha_M$, \text{градусы}},
                 xlabel = {$t$, c},
                 legend pos=north west,
@@ -658,7 +681,7 @@
         \centering
         \begin{tikzpicture} 
             \begin{axis} [
-                width = \textwidth,
+                width = 0.9\textwidth,
                 ylabel = {$U$, B},
                 xlabel = {$t$, c},
                 legend pos=south east,

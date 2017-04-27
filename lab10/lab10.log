@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  25 APR 2017 20:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  27 APR 2017 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 12 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
-File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -1181,20 +1181,20 @@ Package: TAYTitle 2015/08/10 v.01 an example package
 ) (./lab10.aux)
 \openout1 = `lab10.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1215,12 +1215,12 @@ LaTeX Font Info:    ... okay on input line 49.
 * \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=11.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=50.0pt
+* \marginparwidth=35.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1294,14 +1294,14 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.13}).
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 51.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 52.
 
 LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 51.
+(Font)              size <20.74> substituted on input line 52.
 
 
 LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 51.
+(Font)              size <20.74> substituted on input line 52.
 
 [1
 
@@ -1309,15 +1309,20 @@ LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
 <images/EMO.png, id=15, 587.19376pt x 316.18124pt>
 File: images/EMO.png Graphic file (type png)
  <use images/EMO.png>
-Package pdftex.def Info: images/EMO.png used on input line 58.
-(pdftex.def)             Requested size: 483.69687pt x 260.4523pt.
+Package pdftex.def Info: images/EMO.png used on input line 59.
+(pdftex.def)             Requested size: 338.58632pt x 182.3142pt.
+
+Overfull \hbox (2.90797pt too wide) in paragraph at lines 62--63
+[]\T2A/cmr/m/n/12 Усилительно-преобразовательное устрой-ство (УПУ) опи-сы-ва-ет
+-ся сле-ду-ю-щим урав-
+ []
 
 [1 <./images/EMO.png>] [2] [3]
 <images/FullModel/full-model.pdf, id=39, 1164.35pt x 230.8625pt>
 File: images/FullModel/full-model.pdf Graphic file (type pdf)
 
 <use images/FullModel/full-model.pdf>
-Package pdftex.def Info: images/FullModel/full-model.pdf used on input line 211
+Package pdftex.def Info: images/FullModel/full-model.pdf used on input line 212
 .
 (pdftex.def)             Requested size: 483.69687pt x 95.90477pt.
 PGFPlots: reading {data/FullModel/TransPlot.dat}
@@ -1325,12 +1330,14 @@ PGFPlots: reading {data/FullModel/TransPlot.dat}
 PGFPlots: reading {data/FullModel/TransPlot.dat}
 PGFPlots: reading {data/FullModel/TransPlot.dat}
 Missing character: There is no ; in font nullfont!
+ [4 <./images/FullModel/full-model.pdf>]
 PGFPlots: reading {data/FullModel/TransPlotSwitchedTime.dat}
 PGFPlots: reading {data/FullModel/TransPlotSwitchedTime.dat}
 PGFPlots: reading {data/FullModel/TransPlotSwitchedTime.dat}
 PGFPlots: reading {data/FullModel/TransPlotSwitchedTime.dat}
 Missing character: There is no ; in font nullfont!
- [4 <./images/FullModel/full-model.pdf>]
+
+[5]
 PGFPlots: reading {data/FullModel/Moment-w.dat}
 PGFPlots: reading {data/FullModel/Moment-w.dat}
 PGFPlots: reading {data/FullModel/Moment-w.dat}
@@ -1344,7 +1351,7 @@ PGFPlots: reading {data/FullModel/Moment-I.dat}
 PGFPlots: reading {data/FullModel/Moment-I.dat}
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 280--324
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 282--331
 []$[]$ $[]$
  []
 
@@ -1354,19 +1361,14 @@ PGFPlots: reading {data/FullModel/Moment-alpha.dat}
 PGFPlots: reading {data/FullModel/Moment-alpha.dat}
 PGFPlots: reading {data/FullModel/Moment-alpha.dat}
 Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (1.37425pt too wide) in paragraph at lines 344--345
- [][] 
- []
-
 PGFPlots: reading {data/FullModel/Moment-U.dat}
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 325--363
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 332--370
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/FullModel/Moment.dat}
-[5]
+[6]
 PGFPlots: reading {data/FullModel/InertiaMoment-w.dat}
 PGFPlots: reading {data/FullModel/InertiaMoment-w.dat}
 PGFPlots: reading {data/FullModel/InertiaMoment-w.dat}
@@ -1380,7 +1382,7 @@ PGFPlots: reading {data/FullModel/InertiaMoment-I.dat}
 PGFPlots: reading {data/FullModel/InertiaMoment-I.dat}
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 386--429
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 393--436
 []$[]$ $[]$
  []
 
@@ -1390,19 +1392,19 @@ PGFPlots: reading {data/FullModel/InertiaMoment-alpha.dat}
 PGFPlots: reading {data/FullModel/InertiaMoment-alpha.dat}
 PGFPlots: reading {data/FullModel/InertiaMoment-alpha.dat}
 Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (1.37425pt too wide) in paragraph at lines 449--450
- [][] 
- []
-
 PGFPlots: reading {data/FullModel/InertiaMoment-U.dat}
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 430--467
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 437--474
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/FullModel/InertiaMoment.dat}
-[6]
+[7]
+Overfull \hbox (5.01347pt too wide) in paragraph at lines 493--493
+[]\T2A/cmr/bx/n/17.28 Исследование вли-я-ния пе-ре-да-точ-но-го от-но-ше-ния $\
+OML/cmm/m/it/17.28 i[]$ \T2A/cmr/bx/n/17.28 ре-
+ []
+
 PGFPlots: reading {data/FullModel/GearRatio-w.dat}
 PGFPlots: reading {data/FullModel/GearRatio-w.dat}
 PGFPlots: reading {data/FullModel/GearRatio-w.dat}
@@ -1416,7 +1418,7 @@ PGFPlots: reading {data/FullModel/GearRatio-I.dat}
 PGFPlots: reading {data/FullModel/GearRatio-I.dat}
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 490--533
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 497--542
 []$[]$ $[]$
  []
 
@@ -1428,18 +1430,23 @@ PGFPlots: reading {data/FullModel/GearRatio-alpha.dat}
 Missing character: There is no ; in font nullfont!
 PGFPlots: reading {data/FullModel/GearRatio-U.dat}
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 534--571
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 543--580
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/FullModel/GearRatio.dat}
-[7]
+[8]
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
 Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (8.65799pt too wide) in paragraph at lines 627--628
+ [][] 
+ []
+
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-I.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-I.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-I.dat}
@@ -1447,7 +1454,12 @@ PGFPlots: reading {data/FullModel/GearRatioWithMoment-I.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-I.dat}
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 592--635
+Overfull \hbox (7.25833pt too wide) in paragraph at lines 655--656
+ [][] 
+ []
+
+
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 601--658
 []$[]$ $[]$
  []
 
@@ -1459,64 +1471,63 @@ PGFPlots: reading {data/FullModel/GearRatioWithMoment-alpha.dat}
 Missing character: There is no ; in font nullfont!
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-U.dat}
 
-Overfull \hbox (2.42162pt too wide) in paragraph at lines 636--673
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 659--696
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/FullModel/GearRatioWithMoment.dat}
-[8] <images/EasyModel/easy-model.pdf, id=117, 662.475pt x 140.525pt>
+[9] <images/EasyModel/easy-model.pdf, id=118, 662.475pt x 140.525pt>
 File: images/EasyModel/easy-model.pdf Graphic file (type pdf)
 
 <use images/EasyModel/easy-model.pdf>
-Package pdftex.def Info: images/EasyModel/easy-model.pdf used on input line 698
+Package pdftex.def Info: images/EasyModel/easy-model.pdf used on input line 721
 .
 (pdftex.def)             Requested size: 338.58632pt x 71.82117pt.
 PGFPlots: reading {data/FullModel/TransPlot.dat}
 PGFPlots: reading {data/EasyModel/TransPlot.dat}
 Missing character: There is no ; in font nullfont!
- [9 <./images/EasyModel/easy-model.pdf>]
+ [10 <./images/EasyModel/easy-model.pdf>]
 PGFPlots: reading {data/FullModel/TransPlotSwitchedTime.dat}
 PGFPlots: reading {data/EasyModel/TransPlotSwitchedTime.dat}
 Missing character: There is no ; in font nullfont!
 
-[10] [11] (./lab10.aux)
+[11] [12] (./lab10.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 26653 strings out of 494399
- 651141 string characters out of 6172184
- 2502351 words of memory out of 5000000
- 29434 multiletter control sequences out of 15000+600000
- 22755 words of font info for 52 fonts, out of 8000000 for 9000
+ 26645 strings out of 494399
+ 650954 string characters out of 6172184
+ 2495772 words of memory out of 5000000
+ 29427 multiletter control sequences out of 15000+600000
+ 21095 words of font info for 50 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 62i,21n,100p,1065b,2318s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx0800.600pk> </home
-/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1000.600pk> </home/senserle
-x/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0600.600pk> </home/senserlex/.texmf-
-var/fonts/pk/ljfour/lh/lh-t2a/labx1095.600pk> </home/senserlex/.texmf-var/fonts
-/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfou
-r/lh/lh-t2a/larm0800.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t
-2a/larm1095.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx20
-74.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk>
- </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0700.600pk> </home/s
-enserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lab10.pdf (12 pages, 1159556 bytes).
+ 62i,21n,100p,1065b,2328s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1000.600pk> </home
+/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0600.600pk> </home/senserle
+x/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/senserlex/.texmf-
+var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/senserlex/.texmf-var/fonts
+/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfou
+r/lh/lh-t2a/larm1200.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t
+2a/labx2074.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm14
+40.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0700.600pk>
+ </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+>
+Output written on lab10.pdf (13 pages, 1155700 bytes).
 PDF statistics:
- 518 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
+ 520 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
