@@ -1,0 +1,552 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.13}
+\pgfplotsset{grid = major, grid style = {dashed}}
+
+\usepackage{subcaption}
+\usepackage{amsmath}
+
+\usepackage{tabu}
+
+\usepackage{float}
+
+% PGFPlots Table ========================================================
+\usepackage{pgfplotstable}
+\renewcommand{\arraystretch}{1.3}
+% recommended:
+\usepackage{booktabs}
+\usepackage{colortbl}
+% pgfplotstable settings
+\pgfplotstableset{
+    every head row/.style = {before row = \hline},
+    after row = {[1mm] \hline},
+    column type = {|c},
+    every last column/.style={
+        column type/.add={}{|},
+    },   
+}
+\usepackage{threeparttable}
+%\renewcommand{\TPTminimum}{\linewidth} -- variable
+
+% Paragraph indent
+\usepackage{indentfirst}
+\setlength{\parindent}{15mm}
+
+%Change label separator
+\usepackage{caption}
+\captionsetup[table]{labelformat=simple, labelsep = endash, justification = raggedright, singlelinecheck = off}
+\captionsetup[figure]{labelformat=simple, labelsep = endash, name = Рисунок}
+
+\usepackage{../titlepage/TAYTitle}
+\author{Овчаров Алексей}
+\title{Исследование математической модели пьезоэлектрического исполнительного устройства}
+\labnumber{11}
+\variant{3}
+
+\begin{document}
+\maketitle
+
+\section{Задание}
+\textbf{Целью работы} является изучение математических моделей и исследование характеристик исполнительного устройства, построенного на основе пьезоэлектрического двигателя (ПД) микроперемещений. \par
+Необходимо построить схему ПД, которая изображена на рисунке 1 и провести математическое моделирование при различных значениях параметров системы.
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}
+    \draw[thick,->] (0, 3) -- (1, 3) node[anchor = south east] {U};
+    \draw[thick] (1, 2.4) -- (1, 3.6) -- (3, 3.6) -- (3, 2.4) -- (1, 2.4);
+    \draw (2, 3) node {$\displaystyle{\frac{K_u}{T_us + 1}}$};
+    \draw[fill] (3.5, 3) circle (.07); % block with Ku -1
+    \draw[thick, ->] (3.5, 3) -- (3.5, 4);
+    \draw[thick] (3, 4) -- (4, 4) -- (4, 5) -- (3, 5) -- (3, 4);
+    \draw (3.5, 4.5) node {$K_{u}^{-1}$};
+    \draw[thick, ->] (3.5, 5) -- (3.5, 5.5) node[anchor = west] {$\hat{U}_p$};
+    \draw[thick,->] (3, 3) -- (4, 3);
+    \draw[thick] (4, 2.5) -- (4, 3.5) -- (5, 3.5) -- (5, 2.5) -- (4, 2.5);
+    \draw (4.5, 3) node {$K_0$};
+    \draw[thick, ->] (5, 3) -- (5.75, 3);
+    \draw[thick] (6, 3) circle (0.25);
+    \draw[thick] (5.82, 2.82) -- (6.18, 3.18); \draw[thick] (6.18, 2.82) -- (5.82, 3.18);
+    \draw[fill] (6, 3) -- (6.18, 3.18) arc (45:135:0.25) -- (6, 3);
+    \draw[fill] (6, 3) -- (5.82, 2.82) arc (225:315:0.25) -- (6, 3);
+    % F_B
+    \draw[thick, ->] (6, 4) -- (6, 3.25) node[anchor = south east] {$F_B$};
+    % KF
+    \draw[fill] (7, 3) circle (.07); % block with Kf
+    \draw[thick, ->] (7, 3) -- (7, 4);
+    \draw[thick] (6.5, 4) -- (7.5, 4) -- (7.5, 5) -- (6.5, 5) -- (6.5, 4);
+    \draw (7, 4.5) node {$K_F$};
+    \draw[thick, ->] (7, 5) -- (7, 5.5) node[anchor = west] {$\hat{F}$};
+    \draw[thick, ->] (6.25, 3) -- (7.625, 3);
+    % gain
+    \draw[thick] (7.625, 2.4) -- (8.375, 2.4) -- (8.375, 3.6) -- (7.625, 3.6) -- (7.625, 2.4);
+    \draw (8, 3) node {$\displaystyle\frac{1}{m}$}; 
+    \draw[thick, ->] (8.375, 3) -- (9.125, 3);
+    % integrator
+    \draw[thick] (9.125, 2.4) -- (9.875, 2.4) -- (9.875, 3.6) -- (9.125, 3.6) -- (9.125, 2.4);
+    \draw (9.5, 3) node {$\displaystyle\frac{1}{s}$}; 
+    % Kv
+    \draw[fill] (10.25, 3) circle (.07);
+    \draw[thick, ->] (10.25, 3) -- (10.25, 4);
+    \draw[thick] (9.75, 4) -- (10.75, 4) -- (10.75, 5) -- (9.75, 5) -- (9.75, 4);
+    \draw (10.25, 4.5) node {$K_v$};
+    \draw[thick, ->] (10.25, 5) -- (10.25, 5.5) node[anchor = west] {$\hat{V}$};
+    \draw[thick, ->] (10.25, 3) -- (10.25, 1.5) -- (8.5, 1.5);
+    \draw[thick] (8.5, 1) -- (8.5, 2) -- (7.5, 2) -- (7.5, 1) -- (8.5, 1);
+    \draw (8, 1.5) node {$K_d$};
+    \draw[thick, ->] (7.5, 1.5) -- (6.25, 1.5);
+    \draw[thick, ->] (9.875, 3) -- (10.625, 3);
+    % integrator
+    \draw[thick] (10.625, 2.4) -- (11.375, 2.4) -- (11.375, 3.6) -- (10.625, 3.6) -- (10.625, 2.4);
+    \draw (11, 3) node {$\displaystyle\frac{1}{s}$};
+    % Kx
+    \draw[fill] (12, 3) circle (.07); % block with Kx
+    \draw[thick, ->] (12, 3) -- (12, 4);
+    \draw[thick] (11.5, 4) -- (12.5, 4) -- (12.5, 5) -- (11.5, 5) -- (11.5, 4);
+    \draw (12, 4.5) node {$K_x$};
+    \draw[thick, ->] (12, 5) -- (12, 5.5) node[anchor = west] {$\hat{X}$}; 
+    \draw[thick, ->] (12, 3) -- (12, 0) -- (8.5, 0);
+    \draw[thick] (8.5, -0.5) -- (8.5, 0.5) -- (7.5, 0.5) -- (7.5, -0.5) -- (8.5, -0.5);
+    \draw (8, 0) node {$C_p$};
+    \draw[thick, ->] (7.5, 0) -- (6, 0) -- (6, 1.25);
+    \draw[thick] (6, 1.5) circle (0.25);
+    \draw[thick] (5.82, 1.32) -- (6.18, 1.68); \draw[thick] (6.18, 1.32) -- (5.82, 1.68);
+    \draw[thick, ->] (6, 1.75) -- (6, 2.75);
+    \draw[thick, ->] (11.375, 3) -- (13, 3) node[anchor = south east] {$x$};
+\end{tikzpicture}
+\caption{Структурная схема пьезоэлектрического исполнительного устройства}
+\end{figure} \par
+Параметры данной схемы указаны в таблице 1.
+
+\begin{table}[h!]
+    \centering
+    \begin{threeparttable}
+        \caption{параметры пьезоэлектрического двигателя}
+        \begin{tabular} {|c|c|c|c|c|c|}
+            \hline
+            $C_p$ & $m$ & $K_0$ & $K_d$ & $T_u$ & $F_B$ \\
+            Н/м & кг & Н/В & Н$\cdot$с/м & мс & Н \\ \hline
+            $0.8 \cdot 10^8$ & 0.5 & 9.3 & $0.8 \cdot 10^3$ & 0.08 & 75 \\ \hline
+        \end{tabular}
+    \end{threeparttable}
+\end{table}
+
+\newpage
+\section{Анализ пьезоэлектрического двигателя}
+
+\hspace*{-\parindent}%
+\begin{minipage}{0.4\textwidth}
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture} 
+            \begin{semilogxaxis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$20L(\omega)$, дБ},
+                xlabel = {$\omega$, 1/c}, grid = major,
+                grid style = {dashed},
+                xmin = 10e-2, xmax = 10e+5,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = w, y = A] {data/FreqResponse/BodePlot.dat};
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        \caption{ЛАЧХ исполнительно элемента}
+    \end{figure}
+\end{minipage}
+\hspace{0.03\textwidth}
+\begin{minipage}{0.57\textwidth}
+    \parИсполнительное устройство можно представить в следующем (операторном) виде.
+    \begin{equation}
+        x = \frac{K_uK_0U - T_uF_Bs - F_B}{(T_us+1)(ms^2 + K_ds + C_p)}
+    \end{equation} 
+    \par Из выражения (1) можем вывести выражения для ЛАЧХ исследуемого объекта.
+    \begin{equation}
+        A(\omega) = \sqrt{\frac{(K_uK_dU - F_B)^2 + (T_uF_B\omega)^2}{(1 + (T_u\omega)^2)((C_p - m\omega^2)^2 + (K_d\omega)^2)}}
+    \end{equation}
+    \parВ итоге, можем по выражению 2 можем построить саму характеристику. Эта характеристика построена на рисунке 2.
+\end{minipage}
+\vspace{0.5cm}
+\parНа рисунке 3 представлены переходные процессы в ПД при возмущающем воздействии $F_B = 0$. Как видно процесс имеет колебательный характер, затухающий по экспоненте.
+
+\begin{figure}[h!]
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                ylabel = {$\hat{x}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.01,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = x] {data/ex1/TransPlot-x.dat};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                ylabel = {$\hat{U}_p$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.01,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = u] {data/ex1/TransPlot-u.dat};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \vspace{0.5cm}
+
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                ylabel = {$\hat{V}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.01,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = v] {data/ex1/TransPlot-v.dat};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \begin{subfigure}{0.5\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                ylabel = {$\hat{F}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                cycle list name=color list,
+                xmin = 0, xmax = 0.008,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = f] {data/ex1/TransPlot-f.dat};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \caption{Переходные процессы в ПД}
+\end{figure}
+
+\newpage
+\section{Исследование вленяния массы $m$ нагрузки на вид переходных процессов}
+Иземеняя массу нагрузки в пределах $[0.5m, 1.5m]$ получим различные виды переходных процессов с различными значениями преререгулирования $\sigma$, времени переходных процессов $t_\text{п}$, и установившегося значения выходного сигнала $x_\text{уст}$. Полученные значеня представлены в таблице 2.
+\begin{table}[h!]
+    \centering
+    \begin{threeparttable}
+        \caption{Данные о перехоных процессах при изменении момента нагрузки}
+        \pgfplotstabletypeset[
+            columns/x/.style = {column name = {$x_\text{уст}$}},
+            columns/t_p/.style = {column name = {$t_\text{п}$}},
+            columns/sigma/.style = {column name = {$\sigma$}},
+        ]{data/ex2/TransData.dat}
+    \end{threeparttable}
+\end{table} \par
+
+При изменении массы не изменяется $x_\text{уст}$. С увеличением массы увеличиваются значения перерегулироуваия и времени переходных процессов. Этот факт объясняется увеличением динамического усилия $F_\text{Д}$, представленноым выражением ниже.
+\begin{equation*}
+    F_\text{Д} = -m \frac{d^2x}{dt^2}
+\end{equation*}
+\par
+Как видно масса является коэффициентом пропорциональности, соответственно при его увеличении амплитуда колебаний увеличивается. При установлении переходного процесса ускорение стемится к нулю, как следствие влеяние массы на переходной процесс также стремится к нулю. \par
+Все это подтверждают графики, полученные в результате математического моделирования системы. Они представлены на рисунке 4.
+
+\newpage
+\begin{figure}[h!]
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{x}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.007,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = x] {data/ex2/x/1.dat};
+                \addplot[red, mark = none, thick, smooth, dashed] table [x = t, y = x] {data/ex2/x/2.dat};
+                \addplot[black, mark = none, thick, smooth, dotted] table [x = t, y = x] {data/ex2/x/3.dat};
+                \addplot[yellow, mark = none, thick, smooth, densely dashed] table [x = t, y = x] {data/ex2/x/4.dat};
+                \addplot[orange, mark = none, thick, smooth, dashdotted] table [x = t, y = x] {data/ex2/x/5.dat};
+                \legend{$m = 0.25$, $m = 0.38$, $m = 0.5$, $m = 0.63$, $m = 0.75$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \vspace{0.5cm}
+
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{U}_p$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.007,
+            ]
+
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = u] {data/ex2/u/1.dat};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \vspace{0.5cm}
+
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{V}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.007,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = v] {data/ex2/v/1.dat};
+                \addplot[red, mark = none, thick, smooth, dashed] table [x = t, y = v] {data/ex2/v/2.dat};
+                \addplot[black, mark = none, thick, smooth, dotted] table [x = t, y = v] {data/ex2/v/3.dat};
+                \addplot[yellow, mark = none, thick, smooth, densely dashed] table [x = t, y = v] {data/ex2/v/4.dat};
+                \addplot[orange, mark = none, thick, smooth, dashdotted] table [x = t, y = v] {data/ex2/v/5.dat};
+                \legend{$m = 0.25$, $m = 0.38$, $m = 0.5$, $m = 0.63$, $m = 0.75$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \vspace{0.5cm}
+
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{F}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                cycle list name=color list,
+                xmin = 0, xmax = 0.008,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = f] {data/ex2/f/1.dat};
+                \addplot[red, mark = none, thick, smooth, dashed] table [x = t, y = f] {data/ex2/f/2.dat};
+                \addplot[black, mark = none, thick, smooth, dotted] table [x = t, y = f] {data/ex2/f/3.dat};
+                \addplot[yellow, mark = none, thick, smooth, densely dashed] table [x = t, y = f] {data/ex2/f/4.dat};
+                \addplot[orange, mark = none, thick, smooth, dashdotted] table [x = t, y = f] {data/ex2/f/5.dat};
+                \legend{$m = 0.25$, $m = 0.38$, $m = 0.5$, $m = 0.63$, $m = 0.75$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \caption{Влияние массы $m$ на качество перехоных процессов}
+\end{figure}
+
+\newpage
+\section{Исследование влияния $T_u$ на вид переходных процессов}
+Иземеняя время $T_u$ получим различные виды переходных процессов с различными значениями преререгулирования $\sigma$, времени переходных процессов $t_\text{п}$, и установившегося значения выходного сигнала $x_\text{уст}$. Полученные значеня представлены в таблице 3.
+\begin{table}[h!]
+    \centering
+    \begin{threeparttable}
+        \caption{Данные о переходных процессах при изменении времени $T_u$}
+        \pgfplotstabletypeset[
+            columns/Tu/.style = {column name = {$T_u$}},
+            columns/x/.style = {column name = {$x_\text{уст}$}},
+            columns/t_p/.style = {column name = {$t_\text{п}$}},
+            columns/sigma/.style = {column name = {$\sigma$}},
+        ]{data/ex3/TransData.dat}
+    \end{threeparttable}
+\end{table} \par
+При увеличении значения $T_u$, уменьшаются значеия времени переходного процесса и перерегулирования. Так происходит, посокльку явление обратного пьезоффэкта, который характерерзуется уравнением, представленным ниже, протекает более плавно, за счет течго разница между силами уменьшается и процесс протекает с меньшей амплитудой колебаний, за счет чего уменьшается время переходного процесса. \par
+\begin{equation*}
+    F_0 = K_0U_p
+\end{equation*} \par
+На рисунке 5 представлены переходные процессы проеткающие в пьезоэлектрическом двигателе пр изменении значения постоянной времени $T_u$.
+
+\newpage
+\begin{figure}[h!]
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{x}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.007,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = x] {data/ex3/x/1.dat};
+                \addplot[red, mark = none, thick, smooth, dashed] table [x = t, y = x] {data/ex3/x/2.dat};
+                \addplot[black, mark = none, thick, smooth, dotted] table [x = t, y = x] {data/ex3/x/3.dat};
+                \addplot[yellow, mark = none, thick, smooth, densely dashed] table [x = t, y = x] {data/ex3/x/4.dat};
+                \legend{$T_u = 8\cdot10^{-5}$, $T_u = 1.6\cdot10^{-4}$, $T_u = 3.2\cdot10^{-4}$, $T_u = 4.8\cdot10^{-4}$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \vspace{0.5cm}
+
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{U}_p$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.007,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = u] {data/ex3/u/1.dat};
+                \addplot[red, mark = none, thick, smooth, dashed] table [x = t, y = u] {data/ex3/u/2.dat};
+                \addplot[black, mark = none, thick, smooth, dotted] table [x = t, y = u] {data/ex3/u/3.dat};
+                \addplot[yellow, mark = none, thick, smooth, densely dashed] table [x = t, y = u] {data/ex3/u/4.dat};
+                \legend{$T_u = 8\cdot10^{-5}$, $T_u = 1.6\cdot10^{-4}$, $T_u = 3.2\cdot10^{-4}$, $T_u = 4.8\cdot10^{-4}$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \vspace{0.5cm}
+
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{V}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.007,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = v] {data/ex3/v/1.dat};
+                \addplot[red, mark = none, thick, smooth, dashed] table [x = t, y = v] {data/ex3/v/2.dat};
+                \addplot[black, mark = none, thick, smooth, dotted] table [x = t, y = v] {data/ex3/v/3.dat};
+                \addplot[yellow, mark = none, thick, smooth, densely dashed] table [x = t, y = v] {data/ex3/v/4.dat};
+                \legend{$T_u = 8\cdot10^{-5}$, $T_u = 1.6\cdot10^{-4}$, $T_u = 3.2\cdot10^{-4}$, $T_u = 4.8\cdot10^{-4}$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \vspace{0.5cm}
+
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{F}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                cycle list name=color list,
+                xmin = 0, xmax = 0.008,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = f] {data/ex3/f/1.dat};
+                \addplot[red, mark = none, thick, smooth, dashed] table [x = t, y = f] {data/ex3/f/2.dat};
+                \addplot[black, mark = none, thick, smooth, dotted] table [x = t, y = f] {data/ex3/f/3.dat};
+                \addplot[yellow, mark = none, thick, smooth, densely dashed] table [x = t, y = f] {data/ex3/f/4.dat};
+                \legend{$T_u = 8\cdot10^{-5}$, $T_u = 1.6\cdot10^{-4}$, $T_u = 3.2\cdot10^{-4}$, $T_u = 4.8\cdot10^{-4}$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \caption{Влияние времени $T_u$ на качество перехоных процессов}
+\end{figure}
+
+\newpage
+\section{Исследование влияния коэффициентка упрогости $C_p$ при наличии внешних возмущений $F_B$}
+Исследуем поведение системы, варьируя $C_p$, при выключенном питании $U = 0$ и приложенном воздействии $F_B = 75$. На рисунке 6 представлены полученные в результате математического моделирования переходные процессы при различных $C_p$.
+
+\begin{figure}[h!]
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{x}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.007,
+                extra y ticks={-0.808, -3.233, -1.616},
+                extra y tick style={grid style={black, thick, dashed}},
+                ytick = {-6, -4, 0},
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = x] {data/ex4/x/1.dat};
+                \addplot[red, mark = none, thick, smooth, dashed] table [x = t, y = x] {data/ex4/x/2.dat};
+                \addplot[black, mark = none, thick, smooth, dotted] table [x = t, y = x] {data/ex4/x/3.dat};
+                \legend{$C_p = 4\cdot10^7$, $C_p = 8\cdot10^7$, $C_p = 16\cdot10^7$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \vspace{0.5cm}
+
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture} 
+            \begin{axis} [
+                width = 0.9\textwidth,
+                height = 6cm,
+                ylabel = {$\hat{V}$},
+                xlabel = {$t$, c},
+                legend pos=south east,
+                grid = major,
+                grid style = {dashed},
+                xmin = 0, xmax = 0.007,
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table [x = t, y = v] {data/ex4/v/1.dat};
+                \addplot[red, mark = none, thick, smooth, dashed] table [x = t, y = v] {data/ex4/v/2.dat};
+                \addplot[black, mark = none, thick, smooth, dotted] table [x = t, y = v] {data/ex4/v/3.dat};
+                \legend{$C_p = 4\cdot10^7$, $C_p = 8\cdot10^7$, $C_p = 16\cdot10^7$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{subfigure}
+    \vspace{0.5cm}
+    \caption{Переходные процессы в ПД при различных $C_p$ и $U = 0$}
+\end{figure} \par
+
+Как видно из рисунка, при увеличении коэффициента упругости, сопротивление системы увеличивается и как следствие влияние сил снижается на значение $C_p$, в результате чего снижается амплитуда колебаний и уровень "сжатия" двигателя. Это подтверждает следующее выражение:
+
+\begin{equation*}
+   F_y = C_px = F_0 + F_\text{Д} + F_d + F_B \Rightarrow x = \frac{F_0 + F_\text{Д} + F_d + F_B}{C_p}
+\end{equation*}
+где $F_y$ - сила упрогости, $F_0$ - обратный пьезоэфект, $F_d$ - демпфирующее усилие, $F_\text{Д}$ - динамическое усилие.
+
+\newpage
+\section*{Выводы}
+В данной работе мы ознакомились с принципом работы составного пьезоэлектрического двигателя, а также исследовали его математическую модель.\par
+Система имеет комплексно-сопряженные корни с отрицаетльной вещественной частью. Это видно по переходным процессам, представленным на рисунке 3. \par
+При увеличении массы нагрузки $m$, вследствие увеличения динамического воздействия $F_d$, увеличивается перерегулирование $\sigma$ и время переходных процессов $t_\text{п}$. \par
+При увеличении постоянной времени $T_u$ уменьшается скорость изменения напряжения $U_p$, соотвественно уменьшается разность между силами действующими на ПД и процесс протекает более плавно. Как следствие уменьшается значение перерегулирования, и времени переходного процессо, что преслеживается на рисунке 5. \par
+При увеличи коэффициента упрогости $C_p$ уменьшается влияние сил системы и как следствие снижается амплитуда колебани и установившееся значение $x_\text{уст}$. Это хорошо прослеживается из выражения: $F = -F_B - K_d\dot{x} - C_px$. Значение $x$ будет уменьшаться до тех пор, пока $x > \displaystyle\frac{-F_B - K_d\dot{x}}{C_p}$, когда $x$ опустится ниже этого значения, скорость начнет менять свой знак, и чем выше $C_p$, тем раньше это произойдет. Что видно на рисунке 6.
+
+\end{document}
