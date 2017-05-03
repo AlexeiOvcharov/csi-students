@@ -1,0 +1,377 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\pgfplotsset{compat=1.13}
+\pgfplotsset{grid = major, grid style = {dashed}}
+
+\usepackage{subcaption}
+\usepackage{amsmath}
+
+\usepackage{tabu}
+
+\usepackage{float}
+
+% PGFPlots Table ========================================================
+\usepackage{pgfplotstable}
+\renewcommand{\arraystretch}{1.3}
+% recommended:
+\usepackage{booktabs}
+\usepackage{colortbl}
+% pgfplotstable settings
+\pgfplotstableset{
+    every head row/.style = {before row = \hline},
+    after row = {[1mm] \hline},
+    column type = {|c},
+    every last column/.style={
+        column type/.add={}{|},
+    },   
+}
+\usepackage{threeparttable}
+\renewcommand{\TPTminimum}{0.6\linewidth}
+
+% Paragraph indent
+\usepackage{indentfirst}
+\setlength{\parindent}{15mm}
+
+%Change label separator
+\usepackage{caption}
+\captionsetup[table]{labelformat=simple, labelsep = endash, justification = raggedright, singlelinecheck = off, width = 0.75\textwidth}
+\captionsetup[figure]{labelformat=simple, labelsep = endash, name = Рисунок}
+
+\usepackage{../titlepage/TAYTitle}
+\author{Овчаров Алексей}
+\title{Анализ линейных непрерывных систем с использованием прикладного пакета matlab control system 
+toolbox.}
+\labnumber{12}
+\variant{3}
+
+\begin{document}
+
+\maketitle
+
+\section{Задача}
+\textbf{Целью работы} является исследование динамических и частотных характеристик, анализ структурных свойств и устойчивости линейных непрерывных систем с помощью прикладного пакета matlab. \par
+В качестве объекта исследования выбраны линейные непрерывные динамические стационарные системы. Исходная модель разомкнутой системы представляется в форме вход-выход и описывается передаточной функцией вида: 
+\begin{equation} 
+    W(s) = \frac{b_1s + b_0}{s(a_2s^2 + a_1s + a_0)}
+\end{equation} \par
+Значения коэффициентов $a_0, a_1, a_2, b_0, b_1$ представлены в таблице 1. \par
+\begin{table} [h!]
+    \centering
+    \begin{threeparttable}
+        \caption{Коэффициенты передаточной функции}
+        \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            $a_0$ & $a_1$ & $a_2$ & $b_0$ & $b_1$ \\ \hline
+            1 & 2 & 3 & 2 & 1 \\ \hline
+        \end{tabular}
+    \end{threeparttable}
+\end{table}
+Далее необходимо перейти от исходной разомкнутой системы к замкнутой системе с жесткой отрицательной обратной связью и провести ее анализ в соответствии с порядком выполнения работы.
+
+\newpage
+\section{Анализ разомкнутой системы}
+Передаточная функция разомкнутой системы представлена ниже:
+\begin{equation}
+    W(s) = \frac{s + 2}{3s^3 + 2s^2 + s}
+\end{equation}
+
+\noindent
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{figure} [H]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis} [
+                width = 0.9\textwidth,
+                xlabel = {Re},
+                ylabel = {Im},
+                grid = major,
+                grid style = {dashed},
+                legend pos = north west,
+            ]
+                \addplot[only marks, mark = x, mark size = 5pt] coordinates {(-0.3333, 0.4714) (-0.3333, -0.4714) (0, 0)}; 
+                \addplot[only marks, mark = o, mark size = 5pt] coordinates {(-2, 0)};
+                \legend{полюса, нули};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Нули и полюса}
+    \end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0.5cm}
+    Из исходной системы можем найти нули и полюса.
+    \begin{align*}
+        p_1 & = -2 \\
+        z_1 & = 0 & z_{2, 3} = -\frac{1}{3} \pm i\frac{\sqrt{2}}{3}
+    \end{align*}
+    где p - полюса, z - нули. Графическое изображение найденых решений представлено на рисунке 1.
+\end{minipage}
+\vspace{0.5cm} \par
+
+Далее построим логарифмические амплитудночастотные и фазочастотные характеристики. Они представлены на рисунке 2.
+
+\begin{figure}[h!]
+\begin{subfigure}{\textwidth}
+    \centering
+    \begin{tikzpicture}
+        \begin{semilogxaxis} [
+            width = 0.9\textwidth,
+            height = 6cm,
+            ylabel = {$20L(\omega)$, дБ},
+            xlabel = {$\omega$, 1/c}, grid = major,
+            grid style = {dashed},
+            xmin = 10e-3, xmax = 10e+1,
+            extra y ticks = {0},
+            extra x ticks = {0.919},
+            extra x tick labels = {0.92},
+            xtick = {10e-3, 10e-2, 10e+0, 10e+1},
+            ytick = {50, -50, -100},
+        ]
+            \addplot[red, mark = none, thick, smooth, solid] table [x = w, y = lgA] {data/bode.csv};
+            \draw[dashed] (0.001, 0) -- (0.919, 0);
+            \draw[dashed] (0.919, 0) -- (0.919, -101);
+            \draw[dashed] (0.707, -101) -- (0.707, 0);
+            \draw (0.707, 0) -- (0.707, 6.02);
+            \draw[fill] (0.919, 0) circle (0.05cm) node[anchor = south west] {$\omega_c$};
+        \end{semilogxaxis}
+    \end{tikzpicture}
+\end{subfigure}
+
+\begin{subfigure}{\textwidth}
+    \centering
+    \begin{tikzpicture}
+        \begin{semilogxaxis} [
+            width = 0.9\textwidth,
+            height = 6cm,
+            ylabel = {$\varphi$, град.},
+            xlabel = {$\omega$, 1/c}, grid = major,
+            grid style = {dashed},
+            xmin = 10e-3, xmax = 10e+1,
+            ytick = {-100, -150, -180, -200},
+            xtick = {10e-3, 10e-2, 10e+0, 10e+1},
+            extra x ticks = {0.919, 0.707},
+            extra x tick labels = {, 0.72},
+        ]
+            \addplot[blue, mark = none, thick, smooth, solid] table [x = w, y = phi] {data/bode.csv};
+            \draw[dashed] (0.001, -180) -- (0.919, -180);
+            \draw[dashed] (0.919, -180) -- (0.919, -70);
+            \draw[dashed] (0.707, -180) -- (0.707, -70);
+            \draw (0.919, -180) -- (0.919, -195.2);
+        \end{semilogxaxis}
+    \end{tikzpicture}
+\end{subfigure}
+\caption{ЛАЧХ и ЛФЧХ}
+\end{figure}
+
+\newpage
+\hspace*{-\parindent}%
+\begin{minipage}[t]{0.4\textwidth}
+    \vspace{-1cm}
+    \begin{figure}[H]
+    \centering
+        \begin{tikzpicture}
+            \begin{axis}[
+                grid = major,
+                grid style = {dashed},
+                width = 0.9\textwidth,
+                height = 2.08\textwidth,
+                ymin = -10, ymax = 1,
+                xmin = -4, xmax = 0,
+                xlabel = {Re}, ylabel = {Im},
+            ]
+                \addplot[blue, mark = none, thick, smooth, solid] table {data/nyquist.csv};
+                \draw[dashed] (0, 0) circle (1);
+                \draw[fill] (-1, 0) circle (0.05cm);
+            \end{axis}
+        \end{tikzpicture}
+    \caption{АФЧХ}
+    \end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.6\textwidth}
+    \parindent = 15mm
+    \parПо ЛАЧХ и ЛФЧХ можно найти частоту среза $\omega_c$, запас устойчивости по амплитуде $A_\text{з}$ и по фазе $\varphi_\text{з}$.
+    \begin{align*}
+        \omega_c & = 0.919 & A_\text{з} & = -2 & \varphi_\text{з} = -15.2^\circ
+    \end{align*}
+    Все эти точки отмечены соотвественно на рисунке 2. Далее на основании полученых характеристик можем постороить амплитудночастотую характеристику. Она изображена на рисунке 3. \par
+    Для определения устойчивости воспользуетмся критерием Найквиста. Специально для удобства определения была начерчена единичная окружность. Как видно из рисунка 3 системе не устойчива по данному критерию, поскольку график огибает точку $(-1, 0)$.
+\end{minipage}
+
+\newpage
+\section{Анализ замкнутой системы}
+
+Передаточная функция с коэффициентом обратной связи $K$ записана ниже.
+\begin{equation}
+    W_\text{замк.}(s) = \frac{s + 2}{3s^3 + 2s^2 + (1 + K)s + 2K}
+\end{equation} \par
+Далее на рисунке 4 представлен графики корней при разных коэффициентах обратой связи $K \in [0, 108]$. \par
+\begin{figure} [h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis} [
+            width = 0.9\textwidth,
+            height = 0.5\textwidth,
+            xlabel = {Re},
+            ylabel = {Im},
+            grid = major,
+            grid style = {dashed},
+            legend pos = north west,
+            xmin = -2.1, xmax = 0.8,
+        ]
+            \addplot[mark = none, blue, mark size = 3pt] table [x = Re1, y = Im1] {/home/senserlex/homeworks/TAY/csi-students/lab12/data/rlocus.csv};
+            \addplot[mark = none, blue] table [x = Re2, y = Im2] {/home/senserlex/homeworks/TAY/csi-students/lab12/data/rlocus.csv};
+            \addplot[mark = none, blue] table [x = Re3, y = Im3] {/home/senserlex/homeworks/TAY/csi-students/lab12/data/rlocus.csv};
+            \addplot[only marks, mark = o, mark size = 5pt] coordinates {(-2, 0)};
+            \draw[fill] (0, 0) circle (0.07cm);
+            \draw[fill] (-0.33333, 0.4714) circle (0.07cm);
+            \draw[fill] (-0.33333, -0.4714) circle (0.07cm);
+            \draw (0, 0) -- (-0.2, 2);
+            \draw[] (-0.33333, 0.4714) -- (-0.2, 2);
+            \draw (-0.33333, -0.4714) -- (-0.2, 2);
+            \draw (-0.2, 2) node[anchor = south] {K = 0};
+            \legend{полюса, , , нули};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Нули и полюса}
+\end{figure}
+Как видно, при $K = 0$ система имеет 1 нулевой корень и находится на границе устойчивости нейтрального типа, при увеличении $K$, система становится устойчивой, при этом вещественная часть комплексно сопряженных корней стемится в правую полуплоскость, что ведет к неустойчивости системы. \par
+Пользуясь критерием Гурвица можно вывести, что система будет устойчива при следующих $K$:
+\begin{equation}
+    0 > K > 0.5
+\end{equation}
+Это также соответствует рисунку 4. Выберем $K = 0.15$ и будем дальше с ним работать.\par
+
+\noindent
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{figure} [H]
+        \centering
+        \begin{tikzpicture}
+            \begin{axis} [
+                width = 0.8\textwidth,
+                xlabel = {Re},
+                ylabel = {Im},
+                grid = major,
+                grid style = {dashed},
+                legend pos = north west,
+                xmin = -2.1, xmax = 0,
+            ]
+                \addplot[only marks, mark = x, mark size = 5pt] coordinates {(-0.1504, 0.5007) (-0.1504, -0.5007) (-0.3659, 0)}; 
+                \addplot[only marks, mark = o, mark size = 5pt] coordinates {(-2, 0)};
+                \legend{полюса, нули};
+            \end{axis}
+        \end{tikzpicture}
+        \caption{Нули и полюса}
+    \end{figure}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+    \vspace{0.5cm}
+    \parindent = 15mm
+    В таком случае набор корней будет следующим (также корни изображены на рисунке 5):
+    \begin{align*}
+        p_1 & = -2 & 
+        z_1 & =  -0.3659 \\
+        z_{2, 3} & =  -0.1504 \pm 0.5007i &
+    \end{align*} \par
+    Как видно из рисунка 5 система устойчива. Степень устойчивости системы равна $Re(z_2) = Re(z_3) = -0.1504$.
+\end{minipage}
+
+\newpage
+\parНа рисунке 6 и 7 представлены графики переходной и весовой функций замкнутой системы.
+
+\begin{figure} [h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis} [
+            width = \textwidth,
+            height = 7cm,
+            xlabel = {t, c},
+            ylabel = {y},
+            grid = major,
+            grid style = {dashed},
+            xmin = 0, xmax = 37.504, ymin = 0,
+            extra y ticks = {6.66, 6.993, 6.327, 7.6913},
+            extra y tick labels = {6.66, , , 7.69},
+            extra x ticks = {8.306, 16.17},
+            extra y tick style = {grid style = {black, dashed}},
+            extra tick style={% changes for all extra ticks
+                tick align=outside,
+                tick pos=left,
+                grid style={dotted,black}
+            },
+            ytick = {0, 2, 4},
+            xtick = {0, 5, 10, 15, 20, 25, 30, 35},
+        ]
+            \addplot[blue, mark = none] table {data/step.csv};
+            \draw[fill] (8.3062, 7.6913) circle (0.07cm);
+            \draw[fill] (16.1701, 6.327) circle (0.07cm);
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Переходная функция}
+\end{figure}
+\begin{figure} [h!]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis} [
+            width = \textwidth,
+            height = 7cm,
+            xlabel = {t, c},
+            ylabel = {y},
+            grid = major,
+            grid style = {dashed},
+            xmin = 0, xmax = 37.504,
+            xtick = {0, 5, 10, 15, 20, 25, 30, 35},
+        ]
+            \addplot[blue, mark = none] table {data/impulse.csv};
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Весовая функция} 
+\end{figure}
+Время переходного процесса $t_\text{п}$ и перерегулирование $\sigma$ угазаны ниже:
+\begin{align*}
+    t_\text{п} & = 16.17 c & \sigma & = 15.4\%
+\end{align*} \par
+Далее приведем модель 3 к модели ВСВ. Она выглядит следующим образом:
+\begin{equation}
+    \begin{cases}
+        \dot{X} = \begin{bmatrix}
+            0 & 1 & 0 \\
+            0 & 0 & 1 \\
+            0 & -\frac{1}{3} & -\frac{2}{3}
+        \end{bmatrix}X + \begin{bmatrix}
+            0 \\ 0 \\ 1
+        \end{bmatrix}U \\
+        y = \begin{bmatrix}\frac{2}{3} & \frac{1}{3} & 0\end{bmatrix} X
+    \end{cases}
+\end{equation}
+где $x = \begin{bmatrix} x_1 & x_2 & x_3 \end{bmatrix}^T$.
+\newpage
+\par
+Теперь можно составить матрицы управляемости $W_y$ и наблюдаемости $W_\text{н}$ для опредления управляемости и наблюдаемости модели.
+
+\begin{align*}
+    W_y & = \begin{bmatrix}
+        0 & 0 & 1 \\
+        0 & 1 & -\frac{2}{3} \\
+        0 & -\frac{2}{3} & \frac{2}{9} \\
+    \end{bmatrix} & 
+    W_\text{н} & = \begin{bmatrix}
+        \frac{2}{3} & 0 & 1 \\
+        \frac{1}{3} & \frac{2}{3} & -\frac{1}{9} \\
+        0 & \frac{1}{3} & -\frac{4}{9} \\
+    \end{bmatrix}
+\end{align*}
+Поскольку $rang\{W_y\} = 2$ система является не управляемой. При этом система является полностью наблюдаемой, поскольку $rang\{W_\text{н}\} = 3$.
+
+\newpage
+\section*{Выводы}
+В данной работы мы ислледовали разомкнутую систему. Получили ее корни и сравнили коренной критерий и Найквиста. Неустойчивая система по Накйквисту является системой на нейтральной границе устойчивости по корневому критерию. Также мы постоили различные частотыне характеристики, и по ним определили запас устойчивости по амплитуде и фазе. \par
+Также осуществили анализ замкнутой системы по размокнутой(рисунок 4). При К = 0 система становится разомкнутой. При увеличении К до 1/2 система будет устойчивой. \par
+Далее мы построили переходную и весовую функцию, по которым определили время переходного процесса и перерегулирование, после чего преобразовали модель вход-выход замкнутой системы в каноническую управляемой форму модели ВСВ. \par
+По полученной модели ВСВ мы проверили ее на управляемость и наблюдаемость. Система оказалась не полностью управляемой, поскольку элемент $a_{31}$ матрицы состояний равен нулю.
+\end{document}
