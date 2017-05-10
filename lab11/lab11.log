@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  2 MAY 2017 21:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  10 MAY 2017 03:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab11
+**lab11.tex
 (./lab11.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 12 language(s) loaded.
@@ -1186,7 +1186,8 @@ LaTeX Warning: You have requested package `../titlepage/TAYTitle',
 
 Package: TAYTitle 2015/08/10 v.01 an example package
  for wikibooks
-) (./lab11.aux)
+)
+No file lab11.aux.
 \openout1 = `lab11.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
@@ -1203,7 +1204,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1315,30 +1315,30 @@ LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
-Package pgfplots info on input line 154: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 158: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/FreqResponse/BodePlot.dat}
 
-Overfull \hbox (2.83557pt too wide) in paragraph at lines 157--158
+Overfull \hbox (2.83557pt too wide) in paragraph at lines 161--162
  [][] 
  []
 
 
-Overfull \hbox (5.22096pt too wide) in paragraph at lines 142--174
+Overfull \hbox (5.22096pt too wide) in paragraph at lines 146--178
 []| $[]$   $[]$
  []
 
 PGFPlots: reading {data/ex1/TransPlot-x.dat}
 PGFPlots: reading {data/ex1/TransPlot-u.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 177--210
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 181--214
 []$[]$ $[]$
  []
 
 PGFPlots: reading {data/ex1/TransPlot-v.dat}
 PGFPlots: reading {data/ex1/TransPlot-f.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 211--244
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 215--248
 []$[]$ $[]$ 
  []
 
@@ -1403,13 +1403,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 26605 strings out of 494399
- 649060 string characters out of 6172184
- 2288826 words of memory out of 5000000
+ 26603 strings out of 494399
+ 649040 string characters out of 6172184
+ 2288776 words of memory out of 5000000
  29403 multiletter control sequences out of 15000+600000
  18636 words of font info for 47 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 62i,21n,100p,1008b,2315s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,21n,100p,918b,2317s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home
 /senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/senserle
 x/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/senserlex/.texmf-
@@ -1423,9 +1423,9 @@ r/lh/lh-t2a/larm0700.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lab11.pdf (9 pages, 1111971 bytes).
+Output written on lab11.pdf (9 pages, 1110249 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
+ 336 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)

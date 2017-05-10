@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  4 MAY 2017 02:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  10 MAY 2017 03:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab12
+**lab12.tex
 (./lab12.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 12 language(s) loaded.
@@ -1319,25 +1319,25 @@ LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1]
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 85--115
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 89--119
 [] []
  []
 
-Package pgfplots info on input line 135: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 139: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/bode.csv}
-Package pgfplots info on input line 160: Using 'lua backend=false' for axis: xm
+Package pgfplots info on input line 164: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
 PGFPlots: reading {data/bode.csv}
 [2]
 PGFPlots: reading {data/nyquist.csv}
 
-Underfull \hbox (badness 2790) in paragraph at lines 203--204
+Underfull \hbox (badness 2790) in paragraph at lines 207--208
 []\T2A/cmr/m/n/12 ƒл€ опре-де-ле-ни€ устой-чи-во-сти вос-поль-зу-
  []
 
 
-Overfull \hbox (2.61047pt too wide) in paragraph at lines 173--205
+Overfull \hbox (2.61047pt too wide) in paragraph at lines 177--209
 []| [] [] 
  []
 
@@ -1351,30 +1351,30 @@ PGFPlots: reading {/home/senserlex/homeworks/TAY/csi-students/lab12/data/rlocus
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 1521) in paragraph at lines 281--282
+Underfull \hbox (badness 1521) in paragraph at lines 287--288
 []\T2A/cmr/m/n/12  ак вид-но из ри-сун-ка 5 си-сте-ма
  []
 
 
-Underfull \hbox (badness 1019) in paragraph at lines 281--282
+Underfull \hbox (badness 1019) in paragraph at lines 287--288
 \T2A/cmr/m/n/12 устой-чи-ва. —те-пень устой-чи-во-сти си-сте-мы
  []
 
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 250--283
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 256--289
 [] [] 
  []
 
 [4]
 PGFPlots: reading {data/step.csv}
 
-Overfull \hbox (3.907pt too wide) in paragraph at lines 314--315
+Overfull \hbox (3.907pt too wide) in paragraph at lines 320--321
  [][] 
  []
 
 PGFPlots: reading {data/impulse.csv}
 
-Overfull \hbox (3.10258pt too wide) in paragraph at lines 332--333
+Overfull \hbox (3.10258pt too wide) in paragraph at lines 338--339
  [][] 
  []
 
@@ -1387,11 +1387,11 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  26449 strings out of 494399
  645473 string characters out of 6172184
- 849413 words of memory out of 5000000
+ 849350 words of memory out of 5000000
  29268 multiletter control sequences out of 15000+600000
  17498 words of font info for 43 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 62i,21n,100p,723b,2279s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,21n,100p,727b,2281s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home
 /senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/senserle
 x/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/senserlex/.texmf-
@@ -1405,7 +1405,7 @@ r/lh/lh-t2a/larm0700.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on lab12.pdf (8 pages, 177891 bytes).
+Output written on lab12.pdf (8 pages, 177882 bytes).
 PDF statistics:
  349 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream

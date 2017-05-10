@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  2 MAY 2017 21:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  10 MAY 2017 03:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab10
+**lab10.tex
 (./lab10.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 12 language(s) loaded.
@@ -1178,7 +1178,8 @@ LaTeX Warning: You have requested package `../titlepage/TAYTitle',
 
 Package: TAYTitle 2015/08/10 v.01 an example package
  for wikibooks
-) (./lab10.aux)
+)
+No file lab10.aux.
 \openout1 = `lab10.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -1195,7 +1196,6 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
 LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 50.
 LaTeX Font Info:    ... okay on input line 50.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1309,10 +1309,10 @@ LaTeX Font Warning: Font shape `T2A/cmr/bx/n' in size <20> not available
 <images/EMO.png, id=15, 587.19376pt x 316.18124pt>
 File: images/EMO.png Graphic file (type png)
  <use images/EMO.png>
-Package pdftex.def Info: images/EMO.png used on input line 59.
+Package pdftex.def Info: images/EMO.png used on input line 61.
 (pdftex.def)             Requested size: 338.58632pt x 182.3142pt.
 
-Overfull \hbox (2.90797pt too wide) in paragraph at lines 62--63
+Overfull \hbox (2.90797pt too wide) in paragraph at lines 64--65
 []\T2A/cmr/m/n/12 Усилительно-преобразовательное устрой-ство (УПУ) опи-сы-ва-ет
 -ся сле-ду-ю-щим урав-
  []
@@ -1322,7 +1322,7 @@ Overfull \hbox (2.90797pt too wide) in paragraph at lines 62--63
 File: images/FullModel/full-model.pdf Graphic file (type pdf)
 
 <use images/FullModel/full-model.pdf>
-Package pdftex.def Info: images/FullModel/full-model.pdf used on input line 212
+Package pdftex.def Info: images/FullModel/full-model.pdf used on input line 220
 .
 (pdftex.def)             Requested size: 483.69687pt x 95.90477pt.
 PGFPlots: reading {data/FullModel/TransPlot.dat}
@@ -1351,7 +1351,7 @@ PGFPlots: reading {data/FullModel/Moment-I.dat}
 PGFPlots: reading {data/FullModel/Moment-I.dat}
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 282--331
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 292--341
 []$[]$ $[]$
  []
 
@@ -1363,7 +1363,7 @@ PGFPlots: reading {data/FullModel/Moment-alpha.dat}
 Missing character: There is no ; in font nullfont!
 PGFPlots: reading {data/FullModel/Moment-U.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 332--370
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 342--380
 []$[]$ $[]$ 
  []
 
@@ -1382,7 +1382,7 @@ PGFPlots: reading {data/FullModel/InertiaMoment-I.dat}
 PGFPlots: reading {data/FullModel/InertiaMoment-I.dat}
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 393--436
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 405--448
 []$[]$ $[]$
  []
 
@@ -1394,17 +1394,12 @@ PGFPlots: reading {data/FullModel/InertiaMoment-alpha.dat}
 Missing character: There is no ; in font nullfont!
 PGFPlots: reading {data/FullModel/InertiaMoment-U.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 437--474
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 449--486
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/FullModel/InertiaMoment.dat}
 [7]
-Overfull \hbox (5.01347pt too wide) in paragraph at lines 493--493
-[]\T2A/cmr/bx/n/17.28 Исследование вли-я-ния пе-ре-да-точ-но-го от-но-ше-ния $\
-OML/cmm/m/it/17.28 i[]$ \T2A/cmr/bx/n/17.28 ре-
- []
-
 PGFPlots: reading {data/FullModel/GearRatio-w.dat}
 PGFPlots: reading {data/FullModel/GearRatio-w.dat}
 PGFPlots: reading {data/FullModel/GearRatio-w.dat}
@@ -1418,7 +1413,7 @@ PGFPlots: reading {data/FullModel/GearRatio-I.dat}
 PGFPlots: reading {data/FullModel/GearRatio-I.dat}
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 497--542
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 511--556
 []$[]$ $[]$
  []
 
@@ -1430,12 +1425,11 @@ PGFPlots: reading {data/FullModel/GearRatio-alpha.dat}
 Missing character: There is no ; in font nullfont!
 PGFPlots: reading {data/FullModel/GearRatio-U.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 543--580
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 557--594
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/FullModel/GearRatio.dat}
-[8]
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
@@ -1443,7 +1437,7 @@ PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-w.dat}
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (8.65799pt too wide) in paragraph at lines 627--628
+Overfull \hbox (8.65799pt too wide) in paragraph at lines 641--642
  [][] 
  []
 
@@ -1454,12 +1448,12 @@ PGFPlots: reading {data/FullModel/GearRatioWithMoment-I.dat}
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-I.dat}
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (7.25833pt too wide) in paragraph at lines 655--656
+Overfull \hbox (7.25833pt too wide) in paragraph at lines 669--670
  [][] 
  []
 
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 601--658
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 615--672
 []$[]$ $[]$
  []
 
@@ -1471,16 +1465,17 @@ PGFPlots: reading {data/FullModel/GearRatioWithMoment-alpha.dat}
 Missing character: There is no ; in font nullfont!
 PGFPlots: reading {data/FullModel/GearRatioWithMoment-U.dat}
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 659--696
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 673--710
 []$[]$ $[]$ 
  []
 
+[8]
 PGFPlots: reading {data/FullModel/GearRatioWithMoment.dat}
-[9] <images/EasyModel/easy-model.pdf, id=118, 662.475pt x 140.525pt>
+ [9] <images/EasyModel/easy-model.pdf, id=118, 662.475pt x 140.525pt>
 File: images/EasyModel/easy-model.pdf Graphic file (type pdf)
 
 <use images/EasyModel/easy-model.pdf>
-Package pdftex.def Info: images/EasyModel/easy-model.pdf used on input line 721
+Package pdftex.def Info: images/EasyModel/easy-model.pdf used on input line 737
 .
 (pdftex.def)             Requested size: 338.58632pt x 71.82117pt.
 PGFPlots: reading {data/FullModel/TransPlot.dat}
@@ -1498,13 +1493,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 26645 strings out of 494399
- 650954 string characters out of 6172184
- 2495772 words of memory out of 5000000
+ 26643 strings out of 494399
+ 650934 string characters out of 6172184
+ 3405914 words of memory out of 5000000
  29427 multiletter control sequences out of 15000+600000
  21095 words of font info for 50 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 62i,21n,100p,1065b,2328s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,21n,100p,1069b,2330s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1000.600pk> </home
 /senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0600.600pk> </home/senserle
 x/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/senserlex/.texmf-
@@ -1524,9 +1519,9 @@ s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
 s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 >
-Output written on lab10.pdf (13 pages, 1155700 bytes).
+Output written on lab10.pdf (13 pages, 1155374 bytes).
 PDF statistics:
- 520 PDF objects out of 1000 (max. 8388607)
+ 519 PDF objects out of 1000 (max. 8388607)
  203 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
