@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  21 MAY 2017 04:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  23 MAY 2017 17:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1531,50 +1531,59 @@ Overfull \hbox (8.47255pt too wide) in paragraph at lines 347--348
 ер-вой. Те-перь рас-смот-рим часть,
  []
 
-[11] <images/model.pdf, id=69, 441.65pt x 96.36pt>
+[11] <images/ElectricScheme.pdf, id=69, 505.89pt x 200.75pt>
+File: images/ElectricScheme.pdf Graphic file (type pdf)
+
+<use images/ElectricScheme.pdf>
+Package pdftex.def Info: images/ElectricScheme.pdf used on input line 393.
+(pdftex.def)             Requested size: 505.88875pt x 200.7495pt.
+ [12 <./images/ElectricScheme.pdf>]
+<images/regulator.pdf, id=106, 441.65pt x 80.3pt>
+File: images/regulator.pdf Graphic file (type pdf)
+ <use images/regulator.pdf>
+Package pdftex.def Info: images/regulator.pdf used on input line 402.
+(pdftex.def)             Requested size: 441.64891pt x 80.29979pt.
+PGFPlots: reading {data/ElData2.dat}
+PGFPlots: reading {data/RegStep.dat}
+
+[13 <./images/regulator.pdf>] <images/model.pdf, id=213, 441.65pt x 96.36pt>
 File: images/model.pdf Graphic file (type pdf)
- <use images/model.pdf>
-Package pdftex.def Info: images/model.pdf used on input line 394.
+
+<use images/model.pdf>
+Package pdftex.def Info: images/model.pdf used on input line 449.
 (pdftex.def)             Requested size: 441.64891pt x 96.35974pt.
 PGFPlots: reading {data/step.csv}
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[12 <./images/model.pdf>]
+ [14 <./images/model.pdf>]
 PGFPlots: reading {data/LinEncrease.csv}
 PGFPlots: reading {data/LinEncrease.csv}
 
-Overfull \hbox (3.04219pt too wide) in paragraph at lines 427--459
+Overfull \hbox (3.04219pt too wide) in paragraph at lines 482--514
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/Sin.csv}
 PGFPlots: reading {data/Sin.csv}
 
-Overfull \hbox (3.04219pt too wide) in paragraph at lines 464--496
+Overfull \hbox (3.04219pt too wide) in paragraph at lines 519--551
 []$[]$ $[]$ 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13] 
+[15] 
 AED: lastpage setting LastPage
-[14] (./curseWork.aux)
+[16] (./curseWork.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 27095 strings out of 494399
- 661205 string characters out of 6172184
- 1013597 words of memory out of 5000000
- 29847 multiletter control sequences out of 15000+600000
+ 27127 strings out of 494399
+ 661876 string characters out of 6172184
+ 1344994 words of memory out of 5000000
+ 29873 multiletter control sequences out of 15000+600000
  15692 words of font info for 32 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 62i,15n,107p,960b,2136s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,107p,960b,2134s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx0800.600pk> </home
 /senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/senserle
 x/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.600pk> </home/senserlex/.texmf-
@@ -1591,10 +1600,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf
 onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb>
-Output written on curseWork.pdf (14 pages, 250283 bytes).
+Output written on curseWork.pdf (16 pages, 348548 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
+ 624 PDF objects out of 1000 (max. 8388607)
+ 248 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
