@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  25 MAY 2017 21:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.5)  30 MAY 2017 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1338,6 +1338,9 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks41
 \@floatcapt=\box48
 )
+(/usr/local/share/texmf/tex/latex/pscyr/pscyr.sty
+Package: pscyr 2002/07/04 v0.4d Cyrillic Type1 fonts as default
+)
 (/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplotstable.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplotstable 2016/01/06 v1.13 Table typesetting and Pretty-printing (
@@ -1383,6 +1386,23 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box49
 )
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2015/09/18 v0.5d Insert pages of external PDF documents (AM)
+
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+)
+\AM@pagewidth=\dimen264
+\AM@pageheight=\dimen265
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2015/09/18 v0.5d Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box50
+\AM@toc@title=\toks44
+\c@AM@survey=\count171
+\AM@templatesizebox=\box51
+)
 (./curseWork.aux
 LaTeX Font Info:    Try loading font information for T2A+cmr on input line 4.
  (/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmr.fd
@@ -1390,21 +1410,30 @@ File: t2acmr.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ))
 \openout1 = `curseWork.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Try loading font information for OT1+faq on input line 65.
 
+(/usr/local/share/texmf/tex/latex/pscyr/ot1faq.fd
+File: ot1faq.fd 2001/12/09 Fontinst v1.914 font definitions for OT1/faq.
+)
+LaTeX Font Info:    Try loading font information for T2A+faq on input line 65.
+
+(/usr/local/share/texmf/tex/latex/pscyr/t2afaq.fd
+File: t2afaq.fd 2004/09/23 Fontinst v1.914 font definitions for T2A/faq.
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1441,20 +1470,20 @@ LaTeX Font Info:    ... okay on input line 63.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 63.
+(lastpage)             ! on input line 65.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count171
-\scratchdimen=\dimen264
-\scratchbox=\box50
-\nofMPsegments=\count172
-\nofMParguments=\count173
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count174
-\MPscratchDim=\dimen265
-\MPnumerator=\count175
-\makeMPintoPDFobject=\count176
-\everyMPtoPDFconversion=\toks45
+\scratchcounter=\count172
+\scratchdimen=\dimen266
+\scratchbox=\box52
+\nofMPsegments=\count173
+\nofMParguments=\count174
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count175
+\MPscratchDim=\dimen267
+\MPnumerator=\count176
+\makeMPintoPDFobject=\count177
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1473,139 +1502,198 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-
-LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 63.
-
-
-LaTeX Font Warning: Font shape `T2A/cmr/m/sl' in size <20> not available
-(Font)              size <20.74> substituted on input line 63.
-
-
-LaTeX Font Warning: Font shape `T2A/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 63.
-
-
-LaTeX Font Warning: Font shape `T2A/cmr/m/sl' in size <16> not available
-(Font)              size <17.28> substituted on input line 63.
-
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box51
+\AtBeginShipoutBox=\box53
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.13}).
 
-(./curseWork.toc)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
+)
+<title.pdf, id=4, 597.50829pt x 845.0471pt>
+File: title.pdf Graphic file (type pdf)
+ <use title.pdf>
+Package pdftex.def Info: title.pdf used on input line 68.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: title.pdf Graphic file (type pdf)
+ <use title.pdf>
+Package pdftex.def Info: title.pdf used on input line 68.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+
+<title.pdf, id=7, page=1, 597.50829pt x 845.0471pt>
+File: title.pdf Graphic file (type pdf)
+ <use title.pdf, page 1>
+Package pdftex.def Info: title.pdf, page1 used on input line 68.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: title.pdf Graphic file (type pdf)
+
+<use title.pdf, page 1>
+Package pdftex.def Info: title.pdf, page1 used on input line 68.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: title.pdf Graphic file (type pdf)
+ <use title.pdf, page 1>
+Package pdftex.def Info: title.pdf, page1 used on input line 68.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: title.pdf Graphic file (type pdf)
+ <use title.pdf, page 1>
+Package pdftex.def Info: title.pdf, page1 used on input line 68.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: title.pdf Graphic file (type pdf)
+
+<use title.pdf, page 1>
+Package pdftex.def Info: title.pdf, page1 used on input line 68.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [1
+
+ <./title.pdf{/home/senserlex/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}>]
+<courseWorkTask.pdf, id=24, 597.50829pt x 845.0471pt>
+File: courseWorkTask.pdf Graphic file (type pdf)
+ <use courseWorkTask.pdf>
+Package pdftex.def Info: courseWorkTask.pdf used on input line 72.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: courseWorkTask.pdf Graphic file (type pdf)
+
+<use courseWorkTask.pdf>
+Package pdftex.def Info: courseWorkTask.pdf used on input line 72.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+
+<courseWorkTask.pdf, id=27, page=1, 597.50829pt x 845.0471pt>
+File: courseWorkTask.pdf Graphic file (type pdf)
+
+<use courseWorkTask.pdf, page 1>
+Package pdftex.def Info: courseWorkTask.pdf, page1 used on input line 72.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: courseWorkTask.pdf Graphic file (type pdf)
+ <use courseWorkTask.pdf, page 1>
+Package pdftex.def Info: courseWorkTask.pdf, page1 used on input line 72.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: courseWorkTask.pdf Graphic file (type pdf)
+
+<use courseWorkTask.pdf, page 1>
+Package pdftex.def Info: courseWorkTask.pdf, page1 used on input line 72.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: courseWorkTask.pdf Graphic file (type pdf)
+ <use courseWorkTask.pdf, page 1>
+Package pdftex.def Info: courseWorkTask.pdf, page1 used on input line 72.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: courseWorkTask.pdf Graphic file (type pdf)
+
+<use courseWorkTask.pdf, page 1>
+Package pdftex.def Info: courseWorkTask.pdf, page1 used on input line 72.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [2 <./courseWorkTask.pdf>] (./curseWork.toc)
 \tf@toc=\write4
 \openout4 = `curseWork.toc'.
 
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-]
-[2]
-Overfull \hbox (0.92584pt too wide) in paragraph at lines 101--101
-[]\T2A/cmr/m/n/14.4 Требуется спро-ек-ти-ро-вать ре-гу-ля-тор, вклю-чен-ный по-
-сле-до-ва-тель-но с неиз-
+[3] [4] [5] [6]
+PGFPlots: reading {data/CloseSystemStep.csv}
+ [7]
+Overfull \hbox (7.83974pt too wide) in paragraph at lines 217--217
+[]\T2A/faq/m/n/14.4 Для си-сте-мы с аста-тиз-мом пер-во-го по-ряд-ка пер-вая ни
+з-ко-ча-стот-ная асимп-
  []
 
-[3] [4]
-PGFPlots: reading {data/CloseSystemStep.csv}
- [5] [6] [7]
-Package pgfplots info on input line 255: Using 'lua backend=false' for axis: xm
+[8] [9]
+Package pgfplots info on input line 270: Using 'lua backend=false' for axis: xm
 ode=log unsupported (yet).
- [8] [9]
-<images/PrincipScheme.pdf, id=52, 441.31776pt x 163.26094pt>
+ [10] [11]
+<images/PrincipScheme.pdf, id=106, 441.31776pt x 163.26094pt>
 File: images/PrincipScheme.pdf Graphic file (type pdf)
 
 <use images/PrincipScheme.pdf>
-Package pdftex.def Info: images/PrincipScheme.pdf used on input line 313.
+Package pdftex.def Info: images/PrincipScheme.pdf used on input line 327.
 (pdftex.def)             Requested size: 441.31668pt x 163.26054pt.
- [10 <./images/PrincipScheme.pdf>]
-Overfull \hbox (8.47255pt too wide) in paragraph at lines 353--354
-[]\T2A/cmr/m/n/14.4 Передаточная функ-ция $\OML/cmm/m/it/14.4 W[]\OT1/cmr/m/n/1
-4.4 (\OML/cmm/m/it/14.4 p\OT1/cmr/m/n/14.4 )$ \T2A/cmr/m/n/14.4 ана-ло-гич-на п
-ер-вой. Те-перь рас-смот-рим часть,
- []
-
-[11] <images/ElectricScheme.pdf, id=71, 505.89pt x 200.75pt>
+ [12 <./images/PrincipScheme.pdf>] [13]
+<images/ElectricScheme.pdf, id=124, 505.89pt x 200.75pt>
 File: images/ElectricScheme.pdf Graphic file (type pdf)
 
 <use images/ElectricScheme.pdf>
-Package pdftex.def Info: images/ElectricScheme.pdf used on input line 399.
+Package pdftex.def Info: images/ElectricScheme.pdf used on input line 415.
 (pdftex.def)             Requested size: 505.88875pt x 200.7495pt.
- [12 <./images/ElectricScheme.pdf>]
-<images/regulator.pdf, id=108, 441.65pt x 80.3pt>
+ [14 <./images/ElectricScheme.pdf>]
+<images/regulator.pdf, id=161, 441.65pt x 80.3pt>
 File: images/regulator.pdf Graphic file (type pdf)
  <use images/regulator.pdf>
-Package pdftex.def Info: images/regulator.pdf used on input line 408.
+Package pdftex.def Info: images/regulator.pdf used on input line 424.
 (pdftex.def)             Requested size: 441.64891pt x 80.29979pt.
 PGFPlots: reading {data/ElData2.dat}
 PGFPlots: reading {data/RegStep.dat}
 
-[13 <./images/regulator.pdf>] <images/model.pdf, id=215, 441.65pt x 96.36pt>
+Overfull \hbox (2.9769pt too wide) in paragraph at lines 459--460
+ [][] 
+ []
+
+[15 <./images/regulator.pdf>] <images/model.pdf, id=267, 441.65pt x 96.36pt>
 File: images/model.pdf Graphic file (type pdf)
 
 <use images/model.pdf>
-Package pdftex.def Info: images/model.pdf used on input line 455.
+Package pdftex.def Info: images/model.pdf used on input line 472.
 (pdftex.def)             Requested size: 441.64891pt x 96.35974pt.
 PGFPlots: reading {data/step.csv}
- [14 <./images/model.pdf>]
-PGFPlots: reading {data/LinEncrease.csv}
+ [16 <./images/model.pdf>]
 PGFPlots: reading {data/LinEncrease.csv}
 
-Overfull \hbox (3.04219pt too wide) in paragraph at lines 488--520
+Overfull \hbox (0.5244pt too wide) in paragraph at lines 518--519
+[][] 
+ []
+
+PGFPlots: reading {data/LinEncrease.csv}
+
+Overfull \hbox (3.83041pt too wide) in paragraph at lines 505--537
 []$[]$ $[]$ 
  []
 
 PGFPlots: reading {data/Sin.csv}
 PGFPlots: reading {data/Sin.csv}
 
-Overfull \hbox (3.04219pt too wide) in paragraph at lines 525--557
+Overfull \hbox (2.5025pt too wide) in paragraph at lines 572--573
+[][] 
+ []
+
+
+Overfull \hbox (3.83041pt too wide) in paragraph at lines 542--574
 []$[]$ $[]$ 
  []
 
-[15] [16] 
+[17] [18] 
 AED: lastpage setting LastPage
-[17] (./curseWork.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.28pt have occurred.
-
- ) 
+[19] (./curseWork.aux) ) 
 Here is how much of TeX's memory you used:
- 27135 strings out of 494399
- 661965 string characters out of 6172184
- 1345507 words of memory out of 5000000
- 29878 multiletter control sequences out of 15000+600000
- 18272 words of font info for 35 fonts, out of 8000000 for 9000
+ 27897 strings out of 494399
+ 673691 string characters out of 6172184
+ 1360872 words of memory out of 5000000
+ 30620 multiletter control sequences out of 15000+600000
+ 35954 words of font info for 39 fonts, out of 8000000 for 9000
  452 hyphenation exceptions out of 8191
- 62i,15n,107p,960b,2134s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx0800.600pk> </home
-/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk> </home/senserle
-x/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1000.600pk> </home/senserlex/.texmf-
-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk> </home/senserlex/.texmf-var/fonts
-/pk/ljfour/lh/lh-t2a/labx1440.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfou
-r/lh/lh-t2a/labx2074.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t
-2a/lasl0600.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/lasl08
-00.600pk> </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/lasl1000.600pk>
- </home/senserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/lasl2074.600pk> </home/s
-enserlex/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/lasl1200.600pk></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb>
-Output written on curseWork.pdf (17 pages, 365971 bytes).
+ 62i,18n,107p,934b,2134s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/share/texmf/fonts/enc/dvips/pscyr/t2a.enc}<
+/usr/local/share/texmf/fonts/type1/public/pscyr/antiq4.pfb></usr/local/share/te
+xmf/fonts/type1/public/pscyr/antiq5.pfb></usr/local/share/texmf/fonts/type1/pub
+lic/pscyr/antiq6.pfb></usr/local/share/texmf/fonts/type1/public/pscyr/antiq6.pf
+b></usr/local/share/texmf/fonts/type1/public/pscyr/antiq7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy10.pfb>
+Output written on curseWork.pdf (19 pages, 332162 bytes).
 PDF statistics:
- 692 PDF objects out of 1000 (max. 8388607)
- 258 compressed objects within 3 object streams
+ 388 PDF objects out of 1000 (max. 8388607)
+ 270 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
